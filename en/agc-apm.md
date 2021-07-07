@@ -10,15 +10,33 @@
 | Allows you to view and analyze app performance data to accurately identify the aspects that can be improved. | APM displays app performance indicators from multiple dimensions (such as the version number, country/region, device model, level-1 region, system version, carrier, and network), helping you quickly understand the aspects that can be improved. |
 | Allows you to create custom traces to monitor app performance data in specific scenarios. |  With the APM SDK, you can:<br>1. Create custom traces to monitor your app's performance in scenarios such as sign-in and scene loading.<br>2. Add indicators (such as the number of sign-in times) and properties (such as whether the sign-in is successful) for a custom trace. |
 
-### Version Update Description
+### Version Update Description (Cocos Creator 2.x)
 
-- Latest Version: 0.5.2_1.3.1.300
+- Latest Version: v0.5.3_1.5.2.300
+
+    - Upgrade the SDK to version 1.5.2.300.
+    - Supported automatic ANR monitoring, the enableAnrMonitor method is added to enable or disable this capability.
+    - Added the setUserIdentifier method to the APMS class to set user IDs, which facilitates fault locating by user ID.
+
+- v0.5.2_1.3.1.300
 
     - Fix some bugs.
 
 - v0.5.1_1.3.1
 
     - Integrated Huawei AGC APM service.
+
+### Version Update Description (Cocos Creator 3.x)
+
+- Latest Version: v2.0.1_1.5.2.300
+
+    - Upgrade the SDK to version 1.5.2.300.
+    - Supported automatic ANR monitoring, the enableAnrMonitor method is added to enable or disable this capability.
+    - Added the setUserIdentifier method to the APMS class to set user IDs, which facilitates fault locating by user ID.
+
+- v2.0.0_1.3.1.300
+
+    - Adapt HUAWEI AGC APM to Cocos Creator 3.0.
 
 ## Enable APM Service
 
