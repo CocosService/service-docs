@@ -43,7 +43,7 @@ topon.toponService.integrationChecking();
 
 开发者可以通过 Sample 工程快速体验性能管理服务。
 
-- 点击性能管理服务面板中的 **Sample 工程** 按钮，Clone 或下载 TopOn Sample 工程，并在 Cocos Creator 中打开。
+- 点击 TopOn 服务面板中的 **Sample 工程** 按钮，Clone 或下载 TopOn Sample 工程，并在 Cocos Creator 中打开。
 
 - 参照上文开通 TopOn 并配置相应参数后，可通过 Creator 编辑器菜单栏的 **项目 -> 构建发布** 打开 **构建发布** 面板来构建编译工程。
 
