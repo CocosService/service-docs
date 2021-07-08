@@ -41,7 +41,7 @@ topon.toponService.integrationChecking();
 
 ## Sample 工程
 
-开发者可以通过 Sample 工程快速体验性能管理服务。
+开发者可以通过 Sample 工程快速体验 TopOn 服务。
 
 - 点击 TopOn 服务面板中的 **Sample 工程** 按钮，Clone 或下载 TopOn Sample 工程，并在 Cocos Creator 中打开。
 
