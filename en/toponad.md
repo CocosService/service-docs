@@ -39,9 +39,9 @@ topon.toponService.integrationChecking();
 
 ## Sample Project
 
-Developer can get a quick taste of the APM service with the sample project.
+Developer can get a quick taste of the TopOn service with the sample project.
 
-- Click on the **Sample** button in the APM service panel, clone or download, and open the project in Cocos Creator.
+- Click on the **Sample** button in the TopOn service panel, clone or download, and open the project in Cocos Creator.
 
 - Refer to the above to open TopOn and configure the corresponding parameters, you can open the **Build** panel to compile the project by clicking **Project -> Build** in the Creator editor menu bar.
 
