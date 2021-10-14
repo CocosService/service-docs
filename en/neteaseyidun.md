@@ -4,13 +4,21 @@
 
 ### Version Update Description (Cocos Creator 2.x)
 
-- Current Version: 0.5.2_5.0.4_1.7.1.3
+- Current Version: 0.5.3_5.0.4_1.7.1.3
+
+    -  Optimize account association process.
+
+- 0.5.2_5.0.4_1.7.1.3
 
     -  Add NetEase Yidun service.
 
 ### Version Update Description (Cocos Creator 3.x)
 
-- Current Version: 2.0.0_5.0.4_1.7.1.3
+- Current Version: 2.1.0_5.0.4_1.7.1.3
+
+    -  Optimize account association process.
+
+- 2.0.0_5.0.4_1.7.1.3
 
     -  Add NetEase Yidun service.
 
@@ -24,7 +32,7 @@
 
   ![](neteaseyidun/neteaseyidun-association-btn.png)
   
-- Click the "Associate with Yidun" button, a dialog box will pop up, prompting: "The browser will be opened for association, please return to Cocos Creator after the association is complete", after clicking OK, the browser will open the Yidun association page, as follows:
+- Click the "Associate with Yidun" button, a dialog box will pop up to open the Yidun association page, as follows:
 
   ![](neteaseyidun/neteaseyidun-yidun-association.png)
   
