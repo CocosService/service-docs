@@ -20,3 +20,4 @@
         - [Google Play](sdkhub-plugins/google-play.md)
     - [TopOn (Aggregate Ads)](toponad.md)
     - [TradPlus (Ads Mediation)](tradplusad.md)
+    - [Vungle (Aggregate Ads)](vunglead.md)
