@@ -1,6 +1,6 @@
-# Vungle（聚合广告）快速入门
+# Vungle快速入门
 
-[Vungle 聚合广告](https://vungle.com/) 
+[Vungle](https://vungle.com/) 
 
 ## 一键接入Vungle服务
 
@@ -22,7 +22,7 @@
 
 开发者可以通过 Sample 工程快速体验 Vungle 服务。
 
-- 点击 Vungle 服务面板中的 **Sample 工程** 按钮，Clone 或下载 Vungle Sample 工程，并在 Cocos Creator 中打开。
+- 克隆[Sample工程](https://github.com/CocosService/vungleDemo.git) ，在 Cocos Creator 中打开。
 
 - 参照上文创建 Vungle，配置 appid 参数，并修改代码(assets/startup.ts)中的广告位ID。
 

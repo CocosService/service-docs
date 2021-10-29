@@ -1,6 +1,6 @@
-# Vungle（Aggregate Ads）Quick Start
+# Vungle Quick Start
 
-[Vungle Aggregate Ads](https://vungle.com/)
+[Vungle](https://vungle.com/)
 
 ### Enable Service
 
@@ -21,7 +21,7 @@
 
 Developer can get a quick taste of the Vungle service with the sample project.
 
-- Click on the **Sample** button in the Vungle service panel, clone or download, and open the project in Cocos Creator.
+- Clone [sample project](https://github.com/CocosService/vungleDemo.git) and open it in Cocos Creator.
 
 - Enable Vungle service and configure android/ios appid as mentioned above.
 
