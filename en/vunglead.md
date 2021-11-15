@@ -1,6 +1,6 @@
-# Vungle Quick Start
+# [Vungle](https://vungle.com/) Quick Start
 
-[Vungle](https://vungle.com/)
+Vungle’s best-in-class technology enables mobile app marketers to acquire and retain high value users at scale, by delivering more than two billion engaging ads each day across more than 500,000 mobile apps in more than 140 countries through advanced machine learning, prediction intelligence and creative optimization capabilities. Vungle operates one of the largest and most diverse mobile monetization platforms, with 100k+ direct SDK integrations across leading mobile app publishers and 15k individual content creators across its influencer marketing platform, in addition to a broad suite of capabilities across user acquisition, creative technologies, and content analytics.
 
 ### Enable Service
 
@@ -10,7 +10,7 @@
 
 ![](vunglead/vunglead-panel.png)
 
-- Get the appid from Vungle publisher center and fill in the corresponding configuration field.
+- Get the appid from [Vungle publisher center](https://publisher.vungle.com/applications) and fill in the corresponding configuration field.
 
 - If you do not have a Vungle account, please go to [Vungle](https://app.vungle.com/signup/) to register an account. Then create apps and placements. You can refer to the [Guide Document](https://support.vungle.com/hc/en-us/articles/203610124) .
 
