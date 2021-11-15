@@ -1,6 +1,6 @@
-# Vungle快速入门
+# [Vungle](https://vungle.com/) 快速入门
 
-[Vungle](https://vungle.com/) 
+[Vungle](https://vungle.com/) 凭借先进的机器学习、预测智能和创意优化，触达超过140个国家及地区的55万多个移动应用，每日投放超过 20 亿个极具吸引力的广告，依托卓越的科技能力帮助移动应用营销者大规模获取和留存高价值用户。Vungle 作为全球最大、最多样化的移动流量变现平台之一，旗下整合了涵盖全球顶级移动应用发行商超过 10 万个 SDK 集成，以及汇集 15,000 名个人内容创作者的网红营销平台，此外还同时拥有用户获取、创意技术和内容分析的能力，为移动应用开发者提供高效解决方案。
 
 ## 一键接入Vungle服务
 
@@ -13,7 +13,7 @@
 
   ![](vunglead/vunglead-panel.png)
 
-- 参数配置：参数配置中的appid需要您从Vungle服务后台获取。Vungle 聚合广告在 iOS 和 Android 平台上需要创建不同的 AppID，两者不能公用同一个 AppID。
+- 参数配置：参数配置中的appid需要您从[Vungle服务后台](https://publisher.vungle.com/applications) 获取。Vungle 聚合广告在 iOS 和 Android 平台上需要创建不同的 AppID，两者不能共用同一个 AppID。
 
 - 如果您还没有 Vungle 聚合广告平台的账号，请前往 [Vungle官网](https://app.vungle.com/signup/) 进行注册，在Vungle控制台中创建APP和广告位，详情可参考[Vungle文档](https://support.vungle.com/hc/en-us/articles/203610124) 。
 
