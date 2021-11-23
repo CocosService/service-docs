@@ -26,6 +26,7 @@ Developer can get a quick taste of the Vungle service with the sample project.
 - Enable Vungle service and configure android/ios appid as mentioned above.
 
 - replace placements in assets/startup.ts with yours.
+
   ![](vunglead/vunglead-placementid.png)
 
 - Click **Project -> Build** in the Creator editor menu bar and build the project.
