@@ -37,7 +37,7 @@ Developer can get a quick taste of the Vungle service with the sample project.
 
 ### Initialize the SDK
 
-Set callbacks including that for initialization, ads loading and ads playing. For details, you can refer to (API docs)[https://test-service.cocos.com/document/api/modules/vungle.html#vunglecallbacks] .
+Set callbacks including that for initialization, ads loading and ads playing. For details, you can refer to (API docs)[https://service.cocos.com/document/api/modules/vungle.html#vunglecallbacks] .
 ```ts
 const vungleCallbacks:vungle.VungleCallbacks = {
   init: {
@@ -87,7 +87,7 @@ const vungleCallbacks:vungle.VungleCallbacks = {
 vungle.vungleService.setCallbacks(vungleCallbacks);
 ```
 
-call [setLogDebug](https://test-service.cocos.com/document/api/classes/vungle.vunglead.html#setlogdebug) when you need debug log。
+call [setLogDebug](https://service.cocos.com/document/api/classes/vungle.vunglead.html#setlogdebug) when you need debug log。
 
 ```ts
 vungle.vungleService.setLogDebug(true);
@@ -95,7 +95,7 @@ vungle.vungleService.setLogDebug(true);
 
 We don't need to pass appid as parameter when initializing. Appid input in the service panel will be used.
 
-For details bout initialization setting, you can refer to [API docs](https://test-service.cocos.com/document/api/modules/vungle.html#setting) .
+For details bout initialization setting, you can refer to [API docs](https://service.cocos.com/document/api/modules/vungle.html#setting) .
 
 ```ts
 const vungleSetting: vungle.Setting = {
@@ -125,7 +125,7 @@ if (vungle.vungleService.isInitialized()) {
 
 - Play an Ad
 
-Use these options to customize the ad experience for playback. Ror details, you can refer to [API docs](https://test-service.cocos.com/document/api/modules/vungle.html#adconfig) 。
+Use these options to customize the ad experience for playback. Ror details, you can refer to [API docs](https://service.cocos.com/document/api/modules/vungle.html#adconfig) 。
 ```ts
 const adConfig : vungle.AdConfig = {
     muted: true,

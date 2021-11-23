@@ -38,7 +38,7 @@
 
 ### 初始化SDK
 
-设置回调，包含SDK初始化，广告加载和播放的回调。每一个回调函数的具体信息可以查看[API文档](https://test-service.cocos.com/document/api/modules/vungle.html#vunglecallbacks) 。
+设置回调，包含SDK初始化，广告加载和播放的回调。每一个回调函数的具体信息可以查看[API文档](https://service.cocos.com/document/api/modules/vungle.html#vunglecallbacks) 。
 ```ts
 const vungleCallbacks:vungle.VungleCallbacks = {
   init: {
@@ -89,13 +89,13 @@ const vungleCallbacks:vungle.VungleCallbacks = {
 vungle.vungleService.setCallbacks(vungleCallbacks);
 ```
 
-开发过程中，如果需要查看调试日志，可以调用[setLogDebug](https://test-service.cocos.com/document/api/classes/vungle.vunglead.html#setlogdebug) 。
+开发过程中，如果需要查看调试日志，可以调用[setLogDebug](https://service.cocos.com/document/api/classes/vungle.vunglead.html#setlogdebug) 。
 ```ts
 vungle.vungleService.setLogDebug(true);
 ```
 
 SDK初始化，我们不需要传递App ID作为参数，它会自动使用服务面板填写的App ID。
-setting中每一项的具体信息可以参考[API文档](https://test-service.cocos.com/document/api/modules/vungle.html#setting) 。
+setting中每一项的具体信息可以参考[API文档](https://service.cocos.com/document/api/modules/vungle.html#setting) 。
 ```ts
 const vungleSetting: vungle.Setting = {
   // 广告播放时需要的最小存储空间，单位为MB
@@ -124,7 +124,7 @@ if (vungle.vungleService.isInitialized()) {
 
 - 播放
 
-SDK提供静音、广告方向、弹窗信息等配置，具体可以查看[API文档](https://test-service.cocos.com/document/api/modules/vungle.html#adconfig) 。
+SDK提供静音、广告方向、弹窗信息等配置，具体可以查看[API文档](https://service.cocos.com/document/api/modules/vungle.html#adconfig) 。
 ```ts
 const adConfig : vungle.AdConfig = {
     // 静音设置
@@ -226,4 +226,4 @@ vungle.vungleService.updateCCPAStatus(vungle.ConsentStatus.OPTED_OUT);
 
 ## API 文档
 
-详细的功能接口和 API 说明，请参考 [Vungle - API 文档](https://test-service.cocos.com/document/api/modules/vungle.html) 。
+详细的功能接口和 API 说明，请参考 [Vungle - API 文档](https://service.cocos.com/document/api/modules/vungle.html) 。
