@@ -14,4 +14,4 @@ jobs:
           target_repo_url:
             git@gitee.com:creator-cocos/service-docs.git
           ssh_private_key:
-            ${{ secrets.GITEE_KEY }}
+            ${{ secrets.SERVICEDOCS }}
