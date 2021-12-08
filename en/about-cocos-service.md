@@ -6,6 +6,8 @@ Cocos Creator provides a **Service** panel in the **Menu bar -> Panel**, and dev
 
 The **Service** Panel currently supports the integration of third-party services including the following:
 
+  - [Vungle ](vunglead.md)
+
   - [TopOn (Aggregate Ads) ](toponad.md)
 
   - [TradPlus (Ads Mediation) ](tradplusad.md)
