@@ -222,7 +222,7 @@ update consent status
 vungle.vungleService.updateCCPAStatus(vungle.ConsentStatus.OPTED_OUT);
 ```
 
-## Know Issues
+## Known Issues
 
 #### Rewarded/Interstitial Callbacks only called after ads finish playing
 
