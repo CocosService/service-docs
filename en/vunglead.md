@@ -222,6 +222,13 @@ update consent status
 vungle.vungleService.updateCCPAStatus(vungle.ConsentStatus.OPTED_OUT);
 ```
 
+## Know Issues
+
+#### Rewarded/Interstitial Callbacks only called after ads finish playing
+
+- Cause: Engine stops tick() when the game thread runs in the background for power saving.
+- Workaround: merge this [PR](https://github.com/cocos-creator/engine-native/pull/4083) to your project.
+
 ## API Reference
 
 Please refer to the [Vungle - API Reference](https://service.cocos.com/document/api/modules/vungle.html) 。

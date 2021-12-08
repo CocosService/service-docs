@@ -224,6 +224,12 @@ vungle.vungleService.getCCPAStatus();
 vungle.vungleService.updateCCPAStatus(vungle.ConsentStatus.OPTED_OUT);
 ```
 
+## 已知问题
+
+#### 拉起广告之后的回调在返回游戏时才被调用
+  - 原因：之前因为游戏切换到后台，依然高速刷屏，导致耗电量提升，引擎采用了切换后台时，不再做渲染刷新，导致没有回调。
+  - 临时方案：合并这个 [PR](https://github.com/cocos-creator/engine-native/pull/4083) 到项目中。
+
 ## API 文档
 
 详细的功能接口和 API 说明，请参考 [Vungle - API 文档](https://test-service.cocos.com/document/api/modules/vungle.html) 。
