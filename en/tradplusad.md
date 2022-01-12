@@ -14,7 +14,16 @@
 
 ### Version Update Description (Cocos Creator 3.x)
 
-- Current Version: 2.0.6_6.4.4.1_5.7.1
+- Current Version: 2.0.8_7.0.30.1_6.6.10
+
+    -  Upgrade Android SDK to v7.0.30.1
+    -  Upgrade iOS SDK to v6.6.10
+
+- 2.0.7_6.4.4.1_5.7.1
+
+    - Fix: display conflict error even when current service is disabled.
+
+- 2.0.6_6.4.4.1_5.7.1
 
     -  Fix: when building an iOS project, cause an error when the service is disabled.
 
