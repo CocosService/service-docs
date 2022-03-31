@@ -1,5 +1,13 @@
 # Agora RTC Quick Start
 
+<span style="color:red">
+Agora RTC will no longer to be accessible from the service panel after April 15, 2022.
+Source code of this service is at `$HOME/.CocosCreator/services/agora`. You can create an editor extension according to it. It's appreciated to publish your extensions to [Cocos Store](http://store.cocos.com/app/).
+Thank you for your support and trust.
+</span>
+
+### Introduction
+
 Agora is a leading video, voice and live interactive streaming platform, helping developers deliver rich in-app experiences—including embedded voice and video chat, real-time recording, interactive live streaming, and real-time messaging.
 
 [Agora Interactive Live Streaming Premium](https://docs.agora.io/en/Interactive%20Broadcast/product_live?platform=Cocos%20Creator) enables one-to-many and many-to-many audio or video live streaming with the Agora RTC SDK.

@@ -1,5 +1,15 @@
 # 声网（Agora RTC）快速入门
 
+### 停服通知
+
+<span style="color:red">
+Agora RTC将于2022年4月15日从Cocos Service下架。
+如果您需要自动化集成的功能，可以参考`$HOME/.CocosCreator/services/agora`中的代码，制作编译器插件。欢迎您将做好的插件发布到[Cocos Store](http://store.cocos.com/app/)。
+感谢您一直以来的支持。
+</span>
+
+### 介绍
+
 成立于 2013 年的 [声网 Agora](https://www.agora.io/cn/) 是实时互动 API 平台行业开创者，是全球领先的专业服务商。开发者只需简单调用 API，即可在应用内构建多种实时音视频互动场景。
 
 [Agora 互动直播](https://docs.agora.io/cn/Audio%20Broadcast/product_live_audio?platform=All%20Platforms)（Interactive Live Streaming Premium）可以实现一对多，多对多的音视频互动直播。

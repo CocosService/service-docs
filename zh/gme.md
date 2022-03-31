@@ -1,5 +1,15 @@
 # 游戏多媒体引擎（腾讯云）快速入门
 
+### 停服通知
+
+<span style="color:red">
+游戏多媒体引擎将于2022年4月15日从Cocos Service下架。
+如果您需要自动化集成的功能，可以参考`$HOME/.CocosCreator/services/gme`中的代码，制作编译器插件。欢迎您将做好的插件发布到[Cocos Store](http://store.cocos.com/app/)。
+感谢您一直以来的支持。
+</span>
+
+### 介绍
+
 [**游戏多媒体引擎（Game Multimedia Engine，GME）**](https://cloud.tencent.com/product/gme) 提供一站式语音解决方案。针对不同场景进行深度优化，覆盖游戏、社交、娱乐等多种泛互联网行业应用场景。提供实时语音、语音消息及转文本、语音分析服务，一次接入即可满足多样化的语音需求。
 
 ### 特性
