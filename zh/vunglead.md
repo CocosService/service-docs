@@ -226,10 +226,18 @@ vungle.vungleService.updateCCPAStatus(vungle.ConsentStatus.OPTED_OUT);
 
 ## 已知问题
 
-#### 拉起广告之后的回调在返回游戏时才被调用
+#### 拉起广告之后的回调在返回游戏时才被调用 (3.4之前的版本)
   - 原因：之前因为游戏切换到后台，依然高速刷屏，导致耗电量提升，引擎采用了切换后台时，不再做渲染刷新，导致没有回调。
   - 临时方案：合并这个 [PR](https://github.com/cocos-creator/engine-native/pull/4083) 到项目中。
 
 ## API 文档
 
 详细的功能接口和 API 说明，请参考 [Vungle - API 文档](https://service.cocos.com/document/api/modules/vungle.html) 。
+
+## 注意事项
+
+### iOS构建
+
+1.当前，由于我们使用 Cocoapods 来管理 iOS 依赖，如果您构建的目标平台是 iOS ，则在构建完成后，不要直接点击编译，您需要用Xcode打开生成的Xcode工作空间（以.xcworkspace结尾，不要打开.xcodeproj结尾的项目），在Xcode中继续编译本项目，否则编译会失败。
+
+2.您使用的 Xcode 版本不能低于 12。

@@ -224,7 +224,7 @@ vungle.vungleService.updateCCPAStatus(vungle.ConsentStatus.OPTED_OUT);
 
 ## Known Issues
 
-#### Rewarded/Interstitial Callbacks only called after ads finish playing
+#### Rewarded/Interstitial Callbacks only called after ads finish playing（Versions prior to 3.4）
 
 - Cause: Engine stops tick() when the game thread runs in the background for power saving.
 - Workaround: merge this [PR](https://github.com/cocos-creator/engine-native/pull/4083) to your project.
@@ -232,3 +232,11 @@ vungle.vungleService.updateCCPAStatus(vungle.ConsentStatus.OPTED_OUT);
 ## API Reference
 
 Please refer to the [Vungle - API Reference](https://service.cocos.com/document/api/modules/vungle.html) 。
+
+## NOTES
+
+### Build for iOS platform
+
+1.Currently, because we use Cocoapods to manage the iOS dependencies, if the target platform is iOS, after build is done, don't click the make directly, otherwise, the make will fail. Instead, after the build, you need to open the generated Xcode workspace (ends with .xcworkspace) inside Xcode and compile the project inside Xcode.
+
+2.The version of Xcode you are using cannot be lower than 12.
