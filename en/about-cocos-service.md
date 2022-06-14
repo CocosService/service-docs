@@ -8,8 +8,6 @@ The **Service** Panel currently supports the integration of third-party services
 
   - [Vungle ](vunglead.md)
 
-  - [TopOn (Aggregate Ads) ](toponad.md)
-
   - [TradPlus (Ads Mediation) ](tradplusad.md)
 
   - [Yidun (NetEase)](neteaseyidun.md)
