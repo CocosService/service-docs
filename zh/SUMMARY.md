@@ -4,6 +4,7 @@
     - [服务面板操作指南](user-guide.md)
     - [计费说明](about-billing.md)
 - [服务列表]()
+    - [Taobao Avatar SDK](taobaoavatar.md)
     - [Cocos Analytics](cocos-analytics.md)
     - [声网（Agora RTC）](agora.md)
     - [FrontJS](frontjs.md)

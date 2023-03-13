@@ -1,6 +1,6 @@
 {
     "plugins": [
-        "theme-customize@git+https://oauth2:e9Msh_bxzps6-YdJnVQH@gitlab.cocos.net/backups/gitbook-plugin-theme-customize.git"
+        "theme-customize@git+https://github.com/CocosService/gitbook-plugin-theme-customize"
     ],
     "variables": {
         "themeFexa": {
@@ -26,7 +26,7 @@
                 {
                     "url":"http://...",
                     "target":"_blank",
-                    "name": "管理控制台",
+                     "name": "管理控制台",
                     "border": "nav-border",
                     "type": "console"
                 }
