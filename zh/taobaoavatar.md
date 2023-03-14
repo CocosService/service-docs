@@ -10,21 +10,19 @@ TAOBAO Avatar SDK是一款虚拟角色的软件开发包，开发者可以通过
 
 - 当您已开通TAOBAO Avatar SDK相关服务后，点击菜单栏的面板服务，打开服务板，选择TAOBAO Avatar SDK，进入服务详情页，点击右上方的开启按钮及可开通服务。
 
-![1675240635119.jpg](taobaoavatar/1675240635119.jpg)
+  ![](taobaoavatar/1675240635119.jpg)
 
 - 开通后服务面板图示：
 
-![panel.png](taobaoavatar/panel.png)
+  ![](taobaoavatar/panel.png)
 
 ## 支持平台：
 
-- 发布：淘宝小程序创意互动。
-
 - 预览模式：浏览器预览  (调试用)。
 
-- 发布：Web手机端  (调试用)。
+- 发布：淘宝小程序创意互动。
 
-- 发布：Web桌面端  (调试用)。
+- 发布：Web手机端/Web桌面端  (调试用)。
 
 ## 使用前的初始化
 
@@ -38,13 +36,11 @@ TAOBAO Avatar SDK是一款虚拟角色的软件开发包，开发者可以通过
 
 ### 选择是否需要把SDK依赖的部分资源作为远程资源发布到remote文件夹内。
 
-- 说明：SDK依赖的这部分资源（大小约340KB），在点击初始化时未放置到项目中，在构建时会自动处理。
+- 说明：SDK依赖的这部分资源（大小约2.5MB），在点击初始化时不会放置到项目中，在构建时才进行自动处理。
 
-- 不勾选：构建项目后，会把资源放置到构建后的项目的“assets”文件夹下，文件夹名:“tao_bao_avatar_res”。
+- 不勾选：构建项目后，会把资源放置到构建后的项目的“assets”文件夹下，资源文件夹名:“tao_bao_avatar_res”。
 
-- 勾选：构建项目后，会把资源放置到构建后的项目的“remote”文件夹下，文件夹名:“tao_bao_avatar_res”。
-
-- 此部分资源较少，建议无需勾选。
+- 勾选：构建项目后，会把资源放置到构建后的项目的“remote”文件夹下（处理方式类似把bundle 配置为远程包），资源文件夹名:“tao_bao_avatar_res”。
 
 
 
@@ -56,9 +52,11 @@ TAOBAO Avatar SDK是一款虚拟角色的软件开发包，开发者可以通过
 
 - 初始化完毕后，如果遇到错误提示请查看控制台输出，弹出成功提示后，SDK处于可用状态。会在项目根目录 “assets” 文件夹下中生成“tao_bao_avatar_sdk”文件夹，请等待编辑器内相关资源导入完毕。
 
-- 生成的文件夹根目录（tao_bao_avatar_sdk）可根据需求调整到其他位置,子文件夹请勿修改。当关闭服务时不会删除此文件夹，需手动删除。
+- 生成的文件夹根目录（tao_bao_avatar_sdk）建议不要修改位置。当关闭服务时不会删除此文件夹，需手动删除。
 
 - 初始化成功后会在项目的“assets”同级目录下创建出“preview-template”预览模板，目的是为预览模式下提供形象加载能力，请勿删除，当关闭服务时不会主动删除此文件，需手动删除。如果误删，可在服务面板内再次执行初始化后恢复。
+
+- 控制台如果提示“未支持的 GLTF 扩展”，忽略即可，不会对功能造成任何影响。
 
 
 
@@ -73,7 +71,7 @@ prefab_character：基础人体Prefab
 
   2. 如果确实需要修改此资源，建议在此基础上复制一份后再做编辑
 
-  3. 作用：生成角色形象时候需要传入实例化此预设后的Node作为参数使用
+  3. 作用：生成角色形象时候（new Avatar(...)）需要传入实例化此预设后的Node作为参数（basicBodyNode）使用
 
 - script文件夹：
 componet文件夹：sdk依赖的组件
@@ -81,13 +79,13 @@ libs文件夹：sdk依赖的相关库
 
 - 图示
 
-  ![1675060600868.jpg](taobaoavatar/1675060600868.jpg)
+  ![](taobaoavatar/1675060600868.jpg)
 
 ## 注意事项：
 
 - SDK需要使用项目中的Layer,( User Layer 19),请确保此层级未被使用，且未输入任何字符。
 
-  ![AgAABki-YdJ1TAV-YJZLIbldR4idlFWq.png](taobaoavatar/AgAABki-YdJ1TAV-YJZLIbldR4idlFWq.png)
+  ![](taobaoavatar/AgAABki-YdJ1TAV-YJZLIbldR4idlFWq.png)
 
 - SDK依赖的相关资源为 Bundle 形式，名称为 “tao_bao_avatar_res”，请确保开发的项目中的 bundle 不要使用此名称。
 
@@ -95,57 +93,49 @@ libs文件夹：sdk依赖的相关库
 
   4. 说明：
 
-    5. 不同版本的sdk资源动作文件可能会发生变化，须确保当前版本的全部动画都需要配置
+    5. 不同版本的sdk资源动作文件可能会发生变化，须确保当前版本的全部动画都需要配置，不配置或者配置错误都会导致动画播放错乱
 
-    6. 除自己的角色的形象外其他的角色的动画采用烘焙模式，需要正确配置骨骼贴图布局，不配置或者配置错误都会导致动画播放错乱
+    6. 身体和头部的FBX模型资源在初始化后生成的 tao_bao_avatar_sdk→res→model 文件夹内
 
-    7. 身体和头部的FBX模型资源在初始化后生成的 tao_bao_avatar_sdk→res→model 文件夹内
+    7. 所有的动作资源在初始化后生成的 tao_bao_avatar_sdk→res→anim文件夹内，动画文件内的动画剪辑 以“_Head”结尾的动画clip为头部动画，以“_Body”结尾的动画clip为身体动画
 
-    8. 所有的动作资源在初始化后生成的 tao_bao_avatar_sdk→res→anim文件夹内，动画文件内的动画剪辑 以“_Head”结尾的动画clip为头部动画，以“_Body”结尾的动画clip为身体动画
+  8. 配置参考（仅做参考，具体动作请查看anim文件夹，需全部配置）：
 
-  9. 身体配置参考（仅做参考，具体动作请查看anim文件夹，需全部配置）：
+    ![](taobaoavatar/image.png)
 
-    ![身体.jpg](taobaoavatar/身体.jpg)
-
-  10. 头部配置（仅做参考，具体动作请查看anim文件夹，需全部配置）：
-
-    ![头部.jpg](taobaoavatar/头部.jpg)
-
-  11. 构建Avatar时参数如果 isSelfAvatar 为true，则代表是“自己”的角色，动画播放可使用playAnimUseCrossFade 进行播放，动画切换过程中有过渡效果，但是不参与合批，动画播放实时计算，耗能较高。如果 isSelfAvatar 为false ，则代表是“其他人”的角色，动画切换过程中无过渡效果，如果有相同数据的角色可参与合批，耗能较低。
-
-  12. 加载Avatar的过程中的进度值并非连续数值，如有需要，开发者需自行处理。
+  9. 加载Avatar的过程中回调的加载进度值为 0-100 不连续数值
 
 ## SDK使用建议
 
-  13. 初次调用生成的第一个角色形象时，对资源消耗相对较多，建议放置在进度条中加载，降低加载对业务的影响
+  10. 初次调用生成的新角色形象时，对资源消耗相对较多，建议放置在进度条中加载，降低加载对业务的影响
 
-  14. 程序中尽量避免同时加载多个形象
+  11. 程序中尽量避免同时加载多个形象
 
 ## 支持播放的动作列表
 
 版本：1.0.0
 
-  15. 待机 idle
+  12. 待机 idle
 
-  16. 行走 walk
+  13. 行走 walk
 
-  17. 跑步 run
+  14. 跑步 run
 
-  18. 钓鱼待机 diaoyu_dengdai
+  15. 钓鱼待机 diaoyu_dengdai
 
-  19. 钓鱼拉扯 diaoyu_lache
+  16. 钓鱼拉扯 diaoyu_lache
 
-  20. 钓鱼抛竿 diaoyu_paogan
+  17. 钓鱼抛竿 diaoyu_paogan
 
-  21. 钓鱼收杆 diaoyu_shougan
+  18. 钓鱼收杆 diaoyu_shougan
 
-  22. 展示鱼 diaoyu_zhanshi
+  19. 展示鱼 diaoyu_zhanshi
 
 ## 关于SDK更新
 
-- 1.查看service面板的版本号是否大于resources下的tao_bao_appId.json文件（初始化后才有此文件）的sdkVersion字段
+- 1.更新前建议先备份项目
 
-- 2.更新前建议备份项目
+- 2.查看service面板的版本号是否大于resources下的tao_bao_appId.json文件（初始化后才有此文件）的sdkVersion字段
 
 - 3.手动删除项目中SDK相关资源（文件夹为“tao_bao_avatar_sdk”）
 
@@ -154,6 +144,8 @@ libs文件夹：sdk依赖的相关库
 - 5.检查骨骼贴图布局是否正确
 
 - 6.检查基础人体prefab资源引用是否丢失
+
+- 7.api 可能会发生变化，需手动适配
 
 ## SDK使用
 
@@ -170,7 +162,7 @@ libs文件夹：sdk依赖的相关库
      * 在一个基础人体上加载形象
      * 参数：
      * basicBodyNode:基础人体,在此角色上进行组装形象（实例化prefab_character后的Node节        点,需确保在场景中为激活状态）
-     * isSelfAvatar:是否是自己的角色，自己的角色动画切换时有过渡效果
+     * useBakedAnim:是否启用动画烘焙
      * cfg:淘宝人物形象数据
      * isConvertOverData:是否是转换后的数据
      * castShadow:是否投射阴影
