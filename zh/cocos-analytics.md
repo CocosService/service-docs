@@ -1,3 +1,6 @@
+<div style="background-color: yellow; padding: 10px; color: red;text-align:center">
+    <strong>Cocos Analytics 服务已下线，本文档将在2023年6月15号移除。我们对此带来的不便表示歉意，若有需要可联系 chenfeng@cocos.com，感谢您的理解与支持。</strong>
+</div>
 # Cocos Analytics 快速入门
 
 [Cocos Analytics](https://www.cocos.com/analytics) 用于数据统计和行为分析，并且在后台提供了数据分析支持。只需要在 Cocos Creator 的 **服务** 面板中进行简单的设置就能开启 Cocos Analytics 统计服务，方便在游戏开发过程中快速接入。及时便捷地监测游戏生命周期中的运营情况，为开发者提供符合行业标准的运营分析指标，简单而实用，并在不断的完善中，让开发者可以更专注于游戏开发。目前支持 Android／iOS／Web／微信小游戏平台。
