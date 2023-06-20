@@ -5,7 +5,6 @@
     - [计费说明](about-billing.md)
 - [服务列表]()
     - [Taobao Avatar SDK](taobaoavatar.md)
-    - [Cocos Analytics](cocos-analytics.md)
     - [声网（Agora RTC）](agora.md)
     - [FrontJS](frontjs.md)
     - [易盾（网易）](neteaseyidun.md)
