@@ -16,7 +16,7 @@
 
 ### 版本更新说明
 
-- 当前版本：2.2.1_6.10.0.303
+- 当前版本：[3.x] 2.2.1_6.10.0.303
 
     - 升级SDK版本。
 
@@ -123,7 +123,6 @@ let params = {
         level: 100
     }
 };
-
 huawei.hms.analytics.analyticsService.onEvent(eventName, params);
 ```
 
@@ -208,7 +207,7 @@ console.log('setUserProfile...', name, value);
 **示例**：
 
 ```JavaScript
-huawei.hms.analytics.analyticsService.setPushToken("0864618033588744300007222600CN01");
+huawei.hms.analytics.analyticsService.setPushToken("XXX");
 ```
 
 #### 设置重新开始新 Session 的最短时间间隔
@@ -270,10 +269,10 @@ huawei.hms.analytics.analyticsService.clearCachedData();
 **示例**：
 
 ```JavaScript
-huawei.hms.analytics.analyticsService.getAAID();
 huawei.hms.analytics.analyticsService.once(huawei.hms.HMS_ANALYTICS_EVENT_LISTENER_NAME.GET_AAID, (result) => {
     console.log('getAAID...', JSON.stringify(result));
 });
+huawei.hms.analytics.analyticsService.getAAID();
 ```
 
 #### 获取预定义或者自定义的用户属性
@@ -291,10 +290,10 @@ huawei.hms.analytics.analyticsService.once(huawei.hms.HMS_ANALYTICS_EVENT_LISTEN
 **示例**：
 
 ```JavaScript
-huawei.hms.analytics.analyticsService.getUserProfiles();
 huawei.hms.analytics.analyticsService.once(huawei.hms.HMS_ANALYTICS_EVENT_LISTENER_NAME.GET_USER_PROFILES, (result) => {
     console.log('getUserProfiles...', JSON.stringify(result));
 });
+huawei.hms.analytics.analyticsService.getUserProfiles();
 ```
 
 #### 自定义进入页面事件
@@ -388,7 +387,6 @@ huawei.hms.analytics.analyticsService.setReportPolicies(moveBackgroundPolicy, sc
 
 ```JavaScript
 huawei.hms.analytics.AnalyticsTools.enableLog();
-
 huawei.hms.analytics.AnalyticsTools.enableLog(huawei.hms.LOG_LEVEL.debug);
 ```
 
@@ -430,7 +428,7 @@ NO：关闭|
 
 **示例**
 
-```Plain Text
+```JavaScript
   huawei.hms.analytics.analyticsService.setCollectAdsIdEnabled(true);
 ```
 
@@ -456,7 +454,7 @@ false：打开|
 
 **示例**
 
-```Plain Text
+```JavaScript
 huawei.hms.analytics.analyticsService.setRestrictionShared(true);
 ```
 
@@ -472,12 +470,12 @@ huawei.hms.analytics.analyticsService.setRestrictionShared(true);
 
 **示例**
 
-```Plain Text
-        huawei.hms.analytics.analyticsService.once(huawei.hms.analytics.HMS_ANALYTICS_EVENT_LISTENER_NAME.IS_RESTRICTION_SHARED, (result) => {
-      console.log(
-          'isRestrictionShared',
-          JSON.stringify(result)
-      );
+```JavaScript
+huawei.hms.analytics.analyticsService.once(huawei.hms.analytics.HMS_ANALYTICS_EVENT_LISTENER_NAME.IS_RESTRICTION_SHARED, (result) => {
+console.log(
+    'isRestrictionShared',
+    JSON.stringify(result)
+);
 })
 huawei.hms.analytics.analyticsService.isRestrictionShared();
 ```
@@ -502,11 +500,11 @@ huawei.hms.analytics.analyticsService.isRestrictionShared();
 
 |参数|说明|
 |-|-|
-|params|键值对 object | null | undefined|
+|params|键值对 object 或 null 或 undefined|
 
 **示例**
 
-```Plain Text
+```JavaScript
  let params = {
      platform: 'windows',
      os: 'win10',
@@ -528,7 +526,7 @@ huawei.hms.analytics.analyticsService.isRestrictionShared();
 
 **示例**
 
-```Plain Text
+```JavaScript
 huawei.hms.analytics.analyticsService.setWXOpenId("testWXOpenId1");
 ```
 
@@ -550,7 +548,7 @@ huawei.hms.analytics.analyticsService.setWXOpenId("testWXOpenId1");
 
 **示例**
 
-```Plain Text
+```JavaScript
 huawei.hms.analytics.analyticsService.setWXUnionId("testWXUnionId1");
 ```
 
@@ -568,7 +566,7 @@ huawei.hms.analytics.analyticsService.setWXUnionId("testWXUnionId1");
 
 **示例**
 
-```Plain Text
+```JavaScript
 huawei.hms.analytics.analyticsService.setWXAppId("testWXAppId1");
 ```
 
@@ -596,7 +594,7 @@ huawei.hms.analytics.analyticsService.setWXAppId("testWXAppId1");
 
 **示例**
 
-```Plain Text
+```JavaScript
 huawei.hms.analytics.analyticsService.setChannel("AppGallery");
 ```
 
@@ -620,7 +618,7 @@ huawei.hms.analytics.analyticsService.setChannel("AppGallery");
 
 **示例**
 
-```Plain Text
+```JavaScript
  huawei.hms.analytics.analyticsService.setPushTokenCollectionEnabled(true);
 ```
 
@@ -647,7 +645,7 @@ huawei.hms.analytics.analyticsService.setChannel("AppGallery");
 
 **示例**
 
-```Plain Text
+```JavaScript
 huawei.hms.analytics.analyticsService.setPropertyCollection("userAgent", true)
 ```
 
@@ -669,7 +667,7 @@ huawei.hms.analytics.analyticsService.setPropertyCollection("userAgent", true)
 
 **示例**
 
-```Plain Text
+```JavaScript
 huawei.hms.analytics.analyticsService.setCustomReferrer("customReferrer1");
 ```
 
@@ -685,11 +683,11 @@ huawei.hms.analytics.analyticsService.setCustomReferrer("customReferrer1");
 
 **示例**
 
-```Plain Text
- huawei.hms.analytics.analyticsService.getDataUploadSiteInfo();
-        huawei.hms.analytics.analyticsService.once(huawei.hms.analytics.HMS_ANALYTICS_EVENT_LISTENER_NAME.GET_DATA_UPLOAD_SITE_INFO, (result) => {
-        console.log('getDataUploadSiteInfo', JSON.stringify(result));
+```JavaScript
+huawei.hms.analytics.analyticsService.once(huawei.hms.analytics.HMS_ANALYTICS_EVENT_LISTENER_NAME.GET_DATA_UPLOAD_SITE_INFO, (result) => {
+    console.log('getDataUploadSiteInfo', JSON.stringify(result));
 });
+huawei.hms.analytics.analyticsService.getDataUploadSiteInfo();
 ```
 
 
@@ -700,7 +698,7 @@ huawei.hms.analytics.analyticsService.setCustomReferrer("customReferrer1");
 
 ## 其他
 
-详细的功能说明，请参考服务[指南 ](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/introduction-0000001050745149)。
+详细的功能说明，请参考服务[指南](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/introduction-0000001050745149)。
 
 
 

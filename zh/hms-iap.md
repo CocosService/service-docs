@@ -233,7 +233,7 @@ this.iap.obtainOwnedPurchaseRecord(0);
 
 |参数|说明|
 |-|-|
-|type|2 (StartIapActivityReq.TYPE_SUBSCRIBE_MANAGER_ACTIVITY) 跳转到管理订阅页     3 (StartIapActivityReq.TYPE_SUBSCRIBE_EDIT_ACTIVITY) 跳转到管理订阅页|
+|type|2 (StartIapActivityReq.TYPE_SUBSCRIBE_MANAGER_ACTIVITY) 跳转到管理订阅页，     3 (StartIapActivityReq.TYPE_SUBSCRIBE_EDIT_ACTIVITY) 跳转到管理订阅页|
 |productId|订阅商品ID type为3时候使用|
 
 示例

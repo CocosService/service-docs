@@ -432,30 +432,20 @@ this.game.hideFloatWindow();
 
 |参数|说明|
 |-|-|
-|funcName|可执行的接口名 visualizeWithResult | visualize | growWithResult ｜ grow ｜ makeStepsWithResult ｜ makeSteps ｜ reachWithResult ｜ reach|
+|funcName|可执行的接口名 visualizeWithResult / visualize / growWithResult / grow / makeStepsWithResult / makeSteps / reachWithResult / reach|
 |jsonData|json字符串形式的参数|
 
 #### doAchievementEvent 详细说明
 
 |接口名|功能|Api文档|参数结构示例|
 |-|-|-|-|
-|visualizeWithResult|揭秘成就|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/achievementsclient-0000001050121648#section1225662310354)|{
-            achievementId: "E6B5F0A9A51F000F177BD43CC92B87A6B061F3C33CFCAD2EEDADA1693039968F",
-}|
+|visualizeWithResult|揭秘成就|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/achievementsclient-0000001050121648#section1225662310354)|{achievementId:"XXX",}|
 |visualize|揭秘成就|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/achievementsclient-0000001050121648#section65981041143316)|与 visualizeWithResult 相同|
-|growWithResult|增长成就步长|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/achievementsclient-0000001050121648#section183194537284)|{
-            achievementId: "019ECDD9541E9F1D47BE848166D56771BC87109C875770EB89450212753494AF",//分步成就1
-            stepsNum: 1
-        }|
+|growWithResult|增长成就步长|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/achievementsclient-0000001050121648#section183194537284)|{achievementId: "XXX",stepsNum: 1}|
 |grow|增长成就步长|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/achievementsclient-0000001050121648#section8337723122610)|与 growWithResult 相同|
-|makeStepsWithResult|设置成就步长|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/achievementsclient-0000001050121648#section144876556371)|{
-            achievementId: "CF70904A22DBC3D60135C0831DE99EA3D8E9E3961E663E3CFB8B0BD2D620E376",//分步成就2
-            stepsNum: 3
-        }|
+|makeStepsWithResult|设置成就步长|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/achievementsclient-0000001050121648#section144876556371)|{achievementId: "XXX",stepsNum: 3}|
 |makeSteps|设置成就步长|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/achievementsclient-0000001050121648#section157492333365)|与 makeStepsWithResult 相同|
-|reachWithResult|解锁成就|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/achievementsclient-0000001050121648#section1510825220405)|info = {
-            achievementId: "5B5A1F11D048E22C6A211E3F9942F2E9A2608FBB9C12489F9C994B562E9A80BE",//测试成就1
-        }|
+|reachWithResult|解锁成就|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/achievementsclient-0000001050121648#section1510825220405)|{achievementId: "XXX",}|
 |reach|解锁成就|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/achievementsclient-0000001050121648#section1774516813914)|与 reachWithResult 相同|
 
 示例
@@ -465,7 +455,7 @@ this.game.once(huawei.hms.game.API_EVENT_LIST.doAchievementEventCallback, (resul
     console.log(result);
 });
 let info = {
-    achievementId: "E6B5F0A9A51F000F177BD43CC92B87A6B061F3C33CFCAD2EEDADA1693039968F",
+    achievementId: "XXX",
 }
 this.game.doAchievementEvent("visualizeWithResult", JSON.stringify(info));
 ```
@@ -482,7 +472,7 @@ this.game.doAchievementEvent("visualizeWithResult", JSON.stringify(info));
 
 |参数|说明|
 |-|-|
-|funcName|可执行的接口名 getRankingSwitchStatus | setRankingSwitchStatus | submitRankingScore ｜ submitScoreWithResult|
+|funcName|可执行的接口名 getRankingSwitchStatus / setRankingSwitchStatus / submitRankingScore / submitScoreWithResult|
 |jsonData|json字符串形式的参数|
 
 #### doRankingsEvent 详细说明
@@ -490,14 +480,8 @@ this.game.doAchievementEvent("visualizeWithResult", JSON.stringify(info));
 |接口名|功能|Api文档|参数结构示例|
 |-|-|-|-|
 |getRankingSwitchStatus|查询玩家在当前排行榜的开关状态|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/rankingsclient-0000001050121670#section8941538134716)|{}|
-|setRankingSwitchStatus|设置 排行榜开关 1 打开， 0 关|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/rankingsclient-0000001050121670#section0820175112495)|{
-            stateValue: 1
-}|
-|submitRankingScore|提交玩家分数 排行榜的开关状态要为1|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/rankingsclient-0000001050121670#section19891954194113)|{
-            rankingId: "BA67B4279DD91B5D7071BC08F388FC4275DCF0FDEFFD010A85A34B3260E9A63A",
-            score: "80",
-            scoreTips: "A",//分数的自定义单位，只支持[a-zA-Z0-9_-]中的字符。
-}|
+|setRankingSwitchStatus|设置 排行榜开关 1 打开， 0 关|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/rankingsclient-0000001050121670#section0820175112495)|{stateValue: 1}|
+|submitRankingScore|提交玩家分数 排行榜的开关状态要为1|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/rankingsclient-0000001050121670#section19891954194113)|{rankingId:XXX",score: "80",scoreTips: "A",}|
 |submitScoreWithResult|提交玩家分数 排行榜的开关状态要为1|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/rankingsclient-0000001050121670#section1747331610431)|与 submitRankingScore 相同|
 
 示例
@@ -519,7 +503,7 @@ this.game.doRankingsEvent("getRankingSwitchStatus", "{}");
 
 |参数|说明|
 |-|-|
-|funcName|可执行的接口名 setScopeList | addArchive | removeArchive | getLimitThumbnailSize | getLimitDetailsSize ｜ getShowArchiveListIntent ｜ getArchiveSummaryList ｜ loadArchiveDetails ｜ updateArchive|
+|funcName|可执行的接口名 setScopeList / addArchive / removeArchive / getLimitThumbnailSize / getLimitDetailsSize / getShowArchiveListIntent / getArchiveSummaryList / loadArchiveDetails / updateArchive|
 |jsonData|json字符串形式的参数|
 
 #### doArchiveEvent 详细说明
@@ -527,40 +511,14 @@ this.game.doRankingsEvent("getRankingSwitchStatus", "{}");
 |接口名|功能|Api文档|参数结构示例|
 |-|-|-|-|
 |setScopeList|设置登录前的标识位，如果需要使用存档相关功能 需要在登陆接口调用前调用此接口，登陆成功后才可以使用存档相关功能|无|{}|
-|addArchive|提交存档记录，增加存档|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section919631562213)|{
-            activeTime: "5000",//设置存档变更的游戏时长。(存档变更时长的时间戳。)
-            currentProgress: "50",//设置存档的进度值。(存档进度值，单位由开发者自行定义。)
-            descInfo: "savedata" + Math.ceil(Math.random() * 100), //设置存档的描述。(存档的描述。)
-            // thumbnail: "archiveIcon.png",//存档的封面图片(包含存档封面图片的二进制信息。)
-            // thumbnailMimeType: "png",//封片图片的Mime类型。
-            archiveDetails: "time = 5000,progress = 50",
-            isSupportCache: "0",//是否支持网络异常时先缓存到本地，待网络恢复后再提交。“1”：支持 ，其他：不支持
-        }|
-|removeArchive|删除存档记录|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section11235115492320)|{
-            archiveId: "XXXXX",
-  }|
+|addArchive|提交存档记录，增加存档|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section919631562213)|{<br>activeTime: "5000",//设置存档变更的游戏时长。(存档变更时长的时间戳。)       <br>currentProgress: "50",//设置存档的进度值。(存档进度值，单位由开发者自行定义。)            <br>descInfo: "savedata" + Math.ceil(Math.random() * 100), //设置存档的描述。(存档的描述。)            <br>// thumbnail: "archiveIcon.png",//存档的封面图片(包含存档封面图片的二进制信息。)            <br>// thumbnailMimeType: "png",//封片图片的Mime类型。            <br>archiveDetails: "time = 5000,progress = 50",            <br>isSupportCache: "0",//是否支持网络异常时先缓存到本地，待网络恢复后再提交。“1”：支持 ，其他：不支持        }|
+|removeArchive|删除存档记录|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section11235115492320)|{            archiveId: "XXXXX",  }|
 |getLimitThumbnailSize|获取服务器允许的封面文件的最大大小|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section988591510251)|{}|
 |getLimitDetailsSize|获取服务器允许的存档文件的最大大小|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section744706263)|{}|
-|getShowArchiveListIntent|获取存档数据选择界面的Intent对象|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section060419457266)|{
-            title: "我的存档",      //界面上展示的存档的名称。
-            allowAddBtn: "0",       //是否允许有新增存档按钮。"1"允许 其他不允许
-            allowDeleteBtn: "0",    //是否允许有删除存档按钮。"1"允许 其他不允许
-            maxArchive: "-1",          //展示存档的最大数量，"-1"表示展示全部。
- }|
-|getArchiveSummaryList|获取当前玩家的所有存档元数据，支持从本地缓存获取。|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section20922651183118)|{
-            isRealTime: "1",      //是否联网获取数据。"1"是，表示从华为游戏服务器获取数据。否，表示从本地缓存获取数据。本地缓存时间为5分钟，如果本地无缓存或缓存超时，则从华为游戏服务器获取。
-}|
-|loadArchiveDetails|打开存档|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section410921163316)|{
-            diffStrategy: "STRATEGY_TOTAL_PROGRESS",//https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section073211610341
-            archiveId: selectInfo.archiveId,
- }|
-|updateArchive|使用修改后的存档元数据和存档文件内容以异步方式解决数据冲突|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section185311123389)|{
-            archiveId: selectInfo.archiveId,
-            activeTime: "8000",
-            currentProgress: "60",
-            archiveDetails: "time=8000,progress=60",
-            descInfo: "savedata" + Math.ceil(Math.random() * 100),
- }|
+|getShowArchiveListIntent|获取存档数据选择界面的Intent对象|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section060419457266)|{            <br>title: "我的存档",      //界面上展示的存档的名称。            <br>allowAddBtn: "0",       //是否允许有新增存档按钮。"1"允许 其他不允许            <br>allowDeleteBtn: "0",    //是否允许有删除存档按钮。"1"允许 其他不允许            <br>maxArchive: "-1",          //展示存档的最大数量，"-1"表示展示全部。 }|
+|getArchiveSummaryList|获取当前玩家的所有存档元数据，支持从本地缓存获取。|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section20922651183118)|{            isRealTime: "1",      //是否联网获取数据。"1"是，表示从华为游戏服务器获取数据。否，表示从本地缓存获取数据。本地缓存时间为5分钟，如果本地无缓存或缓存超时，则从华为游戏服务器获取。}|
+|loadArchiveDetails|打开存档|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section410921163316)|{            diffStrategy: "STRATEGY_TOTAL_PROGRESS",[参考链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section073211610341)            archiveId: selectInfo.archiveId, }|
+|updateArchive|使用修改后的存档元数据和存档文件内容以异步方式解决数据冲突|[链接](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section185311123389)|{            <br>archiveId: selectInfo.archiveId,            <br>activeTime: "8000",            <br>currentProgress: "60",            <br>archiveDetails: "time=8000,progress=60",            <br>descInfo: "savedata" + Math.ceil(Math.random() * 100), }|
 
 示例
 

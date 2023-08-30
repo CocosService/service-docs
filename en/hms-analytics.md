@@ -16,7 +16,7 @@
 
 ### Version Update Description
 
-- Latest Version:2.2.1_6.10.0.303
+- Latest Version:[3.x] 2.2.1_6.10.0.303
 
     - Upgrade the SDK version.
 
@@ -206,7 +206,7 @@ If the HMS Core Push Kit is integrated through SDKHub, the callback returned by 
 **Example**:
 
 ```JavaScript
-huawei.hms.analytics.analyticsService.setPushToken("0864618033588744300007222600CN01");
+huawei.hms.analytics.analyticsService.setPushToken("XXX");
 ```
 
 #### Sets the minimum interval for starting a new session
@@ -426,7 +426,7 @@ false: no|
 
 **Example:**
 
-```Plain Text
+```JavaScript
   huawei.hms.analytics.analyticsService.setCollectAdsIdEnabled(true);
 ```
 
@@ -452,7 +452,7 @@ false: no|
 
 **Example**
 
-```Plain Text
+```JavaScript
  let params = {
      platform: 'windows',
      os: 'win10',
@@ -482,7 +482,7 @@ false: no|
 
 **Example:**
 
-```Plain Text
+```JavaScript
 huawei.hms.analytics.analyticsService.setChannel("AppGallery");
 ```
 
@@ -511,7 +511,7 @@ false: no|
 
 **Example:**
 
-```Plain Text
+```JavaScript
 huawei.hms.analytics.analyticsService.setPropertyCollection("userAgent", true)
 ```
 
@@ -533,7 +533,7 @@ huawei.hms.analytics.analyticsService.setPropertyCollection("userAgent", true)
 
 **Example:**
 
-```Plain Text
+```JavaScript
 huawei.hms.analytics.analyticsService.setCustomReferrer("customReferrer1");
 ```
 
@@ -549,7 +549,7 @@ huawei.hms.analytics.analyticsService.setCustomReferrer("customReferrer1");
 
 **Example:**
 
-```Plain Text
+```JavaScript
  huawei.hms.analytics.analyticsService.getDataUploadSiteInfo();
         huawei.hms.analytics.analyticsService.once(huawei.hms.analytics.HMS_ANALYTICS_EVENT_LISTENER_NAME.GET_DATA_UPLOAD_SITE_INFO, (result) => {
         console.log('getDataUploadSiteInfo', JSON.stringify(result));

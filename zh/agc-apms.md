@@ -605,7 +605,7 @@ let suc = huawei.agc.apms.apmsService.createApmsLog();
 
 |参数|说明|
 |-|-|
-|type|verbose | debug | info | warn | error|
+|type|verbose / debug / info / warn / error|
 |tag|日志tag。|
 |msg|日志内容。|
 

@@ -436,30 +436,20 @@ parameter description
 
 |parameter|description|
 |-|-|
-|funcName|Indicates the name of an executable interface visualizeWithResult | visualize | growWithResult ｜ grow ｜ makeStepsWithResult ｜ makeSteps ｜ reachWithResult ｜ reach|
+|funcName|Indicates the name of an executable interface visualizeWithResult / visualize / growWithResult / grow / makeStepsWithResult / makeSteps / reachWithResult / reach|
 |jsonData|json Parameter in string form|
 
 #### doAchievementEvent description
 
 |Interface Name|Function|References|Sample Code|
 |-|-|-|-|
-|visualizeWithResult|reveal achievement|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/achievementsclient-0000001050121648#section1225662310354)|{
-            achievementId: "E6B5F0A9A51F000F177BD43CC92B87A6B061F3C33CFCAD2EEDADA1693039968F",
-}|
+|visualizeWithResult|reveal achievement|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/achievementsclient-0000001050121648#section1225662310354)|{            achievementId: "XXX",}|
 |visualize|reveal achievement|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/achievementsclient-0000001050121648#section65981041143316)|The same as the visualizeWithResult|
-|growWithResult|Synchronously increases an achievement by the given number of steps.|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/achievementsclient-0000001050121648#section183194537284)|{
-            achievementId: "019ECDD9541E9F1D47BE848166D56771BC87109C875770EB89450212753494AF",//multiple steps achievement1
-            stepsNum: 1
-        }|
+|growWithResult|Synchronously increases an achievement by the given number of steps.|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/achievementsclient-0000001050121648#section183194537284)|{            achievementId: "XXX",//multiple steps achievement1            stepsNum: 1        }|
 |grow|Synchronously increases an achievement by the given number of steps.|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/achievementsclient-0000001050121648#section8337723122610)|The same as the growWithResult|
-|makeStepsWithResult|Synchronously sets an achievement to have the given number of steps completed|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/achievementsclient-0000001050121648#section144876556371)|{
-            achievementId: "CF70904A22DBC3D60135C0831DE99EA3D8E9E3961E663E3CFB8B0BD2D620E376",//multiple steps achievement2
-            stepsNum: 3
-        }|
+|makeStepsWithResult|Synchronously sets an achievement to have the given number of steps completed|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/achievementsclient-0000001050121648#section144876556371)|{            achievementId: "XXX",//multiple steps achievement2            stepsNum: 3        }|
 |makeSteps|Synchronously sets an achievement to have the given number of steps completed|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/achievementsclient-0000001050121648#section157492333365)|The same as the makeStepsWithResult|
-|reachWithResult|unlocks an achievement|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/achievementsclient-0000001050121648#section1510825220405)|info = {
-            achievementId: "5B5A1F11D048E22C6A211E3F9942F2E9A2608FBB9C12489F9C994B562E9A80BE",//test achievement1
-        }|
+|reachWithResult|unlocks an achievement|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/achievementsclient-0000001050121648#section1510825220405)|info = {            achievementId: "XXX",//test achievement1        }|
 |reach|unlocks an achievement|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/achievementsclient-0000001050121648#section1774516813914)|The same as the reachWithResult|
 
 Example
@@ -469,7 +459,7 @@ this.game.once(huawei.hms.game.API_EVENT_LIST.doAchievementEventCallback, (resul
     console.log(result);
 });
 let info = {
-    achievementId: "E6B5F0A9A51F000F177BD43CC92B87A6B061F3C33CFCAD2EEDADA1693039968F",
+    achievementId: "XXX",
 }
 this.game.doAchievementEvent("visualizeWithResult", JSON.stringify(info));
 ```
@@ -486,7 +476,7 @@ parameter description
 
 |parameter|description|
 |-|-|
-|funcName|The executable interface name getRankingSwitchStatus | setRankingSwitchStatus | submitRankingScore ｜ submitScoreWithResult|
+|funcName|The executable interface name getRankingSwitchStatus / setRankingSwitchStatus / submitRankingScore / submitScoreWithResult|
 |jsonData|json string argument|
 
 #### doRankingsEvent description
@@ -494,14 +484,8 @@ parameter description
 |Interface Name|Function|References|Sample Code|
 |-|-|-|-|
 |getRankingSwitchStatus|query the player's leaderboard switch setting|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/rankingsclient-0000001050121670#section8941538134716)|{}|
-|setRankingSwitchStatus|set the switch to 1|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/rankingsclient-0000001050121670#section0820175112495)|{
-            stateValue: 1
-}|
-|submitRankingScore|If the leaderboard switch is set to 1, your game submits the updated score of the player|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/rankingsclient-0000001050121670#section19891954194113)|{
-            rankingId: "BA67B4279DD91B5D7071BC08F388FC4275DCF0FDEFFD010A85A34B3260E9A63A",
-            score: "80",
-            scoreTips: "A",//leaderboard has a custom unit，Only characters in [a-zA-Z0-9 -] are supported.
-}|
+|setRankingSwitchStatus|set the switch to 1|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/rankingsclient-0000001050121670#section0820175112495)|{            stateValue: 1}|
+|submitRankingScore|If the leaderboard switch is set to 1, your game submits the updated score of the player|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/rankingsclient-0000001050121670#section19891954194113)|{            <br>rankingId: "XXX",            <br>score: "80",            <br>scoreTips: "A",//leaderboard has a custom unit，Only characters in [a-zA-Z0-9 -] are supported.}|
 |submitScoreWithResult|If the leaderboard switch is set to 1, your game submits the updated score of the player|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/rankingsclient-0000001050121670#section1747331610431)|The same as the submitRankingScore|
 
 Example
@@ -523,7 +507,7 @@ parameter description
 
 |parameter|description|
 |-|-|
-|funcName|The executable interface name setScopeList | addArchive | removeArchive | getLimitThumbnailSize | getLimitDetailsSize ｜ getShowArchiveListIntent ｜ getArchiveSummaryList ｜ loadArchiveDetails ｜ updateArchive|
+|funcName|The executable interface name setScopeList / addArchive / removeArchive / getLimitThumbnailSize / getLimitDetailsSize / getShowArchiveListIntent / getArchiveSummaryList / loadArchiveDetails ｜ updateArchive|
 |jsonData|json string argument|
 
 #### doArchiveEvent description
@@ -531,40 +515,14 @@ parameter description
 |Interface Name|Function|References|Sample Code|
 |-|-|-|-|
 |setScopeList|To use the saved game function, call AccountAuthParamsHelper.setScopeList when a player signs in to your game to request the scope of DRIVE_APP_DATA|无|{}|
-|addArchive|submits an archive，adds an archive|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/archivesclient-0000001050123603#section919631562213)|{
-            activeTime: "5000",//Set the game duration for save changes. (Timestamp of how long the changes were archived.)
-            currentProgress: "50",//Set the progress of the archive. (archive progress value, the unit shall be defined by developers.)
-            descInfo: "savedata" + Math.ceil(Math.random() * 100), //设置存档的描述。(存档的描述。)
-            // thumbnail: "archiveIcon.png",//The description of the setup file. (Description of the archive.)
-            // thumbnailMimeType: "png",//Mime type of the encased image.
-            archiveDetails: "time = 5000,progress = 50",
-            isSupportCache: "0",//Whether to support network exceptions to the local cache first, network recovery before submission. "1" : Yes, others: No
-        }|
-|removeArchive|Deletes an archive|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/archivesclient-0000001050123603#section11235115492320)|{
-            archiveId: "XXXXX",
-  }|
+|addArchive|submits an archive，adds an archive|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/archivesclient-0000001050123603#section919631562213)|{            <br>activeTime: "5000",//Set the game duration for save changes. (Timestamp of how long the changes were archived.)            <br>currentProgress: "50",//Set the progress of the archive. (archive progress value, the unit shall be defined by developers.)            <br>descInfo: "savedata" + Math.ceil(Math.random() * 100), //设置存档的描述。(存档的描述。)            <br>// thumbnail: "archiveIcon.png",//The description of the setup file. (Description of the archive.)            <br>// thumbnailMimeType: "png",//Mime type of the encased image.            <br>archiveDetails: "time = 5000,progress = 50",            <br>isSupportCache: "0",//Whether to support network exceptions to the local cache first, network recovery before submission. "1" : Yes, others: No        }|
+|removeArchive|Deletes an archive|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/archivesclient-0000001050123603#section11235115492320)|{            archiveId: "XXXXX",  }|
 |getLimitThumbnailSize|Obtains the maximum size of an archive cover file allowed by Huawei game server|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/archivesclient-0000001050123603#section988591510251)|{}|
 |getLimitDetailsSize|Obtains the maximum size of an archive cover file allowed by Huawei game server|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/archivesclient-0000001050123603#section744706263)|{}|
-|getShowArchiveListIntent|Obtains the Intent object for an app to load the saved game list page|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/archivesclient-0000001050123603#section060419457266)|{
-            title: "My archive",      //The name of the archive displayed on the interface.
-            allowAddBtn: "0",       //Whether to allow a new archive button." 1" Allow others not allowed.
-            allowDeleteBtn: "0",    //Whether the delete archive button is allowed. 1" Allow others not allowed.
-            maxArchive: "-1",          //Show the maximum number of archives, "-1" means show all.
- }|
-|getArchiveSummaryList|Obtains all archive metadata of the current player. The data can be obtained from the local cache.|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/archivesclient-0000001050123603#section20922651183118)|{
-            isRealTime: "1",      //Whether to connect to the Internet to fetch data." 1" Yes, means to get data from Huawei game server. No, the data is fetched from the local cache. The local cache time is 5 minutes, if the local cache is not available or the cache has expired, it will be obtained from the Huawei game server.
-}|
-|loadArchiveDetails|Reads archive metadata based on the ArchiveMetadata object|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/archivesclient-0000001050123603#section410921163316)|{
-            diffStrategy: "STRATEGY_TOTAL_PROGRESS",//https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section073211610341
-            archiveId: selectInfo.archiveId,
- }|
-|updateArchive|Uses the modified archive metadata and archive file content to resolve a data conflict asynchronously|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/archivesclient-0000001050123603#section185311123389)|{
-            archiveId: selectInfo.archiveId,
-            activeTime: "8000",
-            currentProgress: "60",
-            archiveDetails: "time=8000,progress=60",
-            descInfo: "savedata" + Math.ceil(Math.random() * 100),
- }|
+|getShowArchiveListIntent|Obtains the Intent object for an app to load the saved game list page|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/archivesclient-0000001050123603#section060419457266)|{            <br>title: "My archive",      //The name of the archive displayed on the interface.            <br>allowAddBtn: "0",       //Whether to allow a new archive button." 1" Allow others not allowed.            <br>allowDeleteBtn: "0",    //Whether the delete archive button is allowed. 1" Allow others not allowed.            <br>maxArchive: "-1",          //Show the maximum number of archives, "-1" means show all. }|
+|getArchiveSummaryList|Obtains all archive metadata of the current player. The data can be obtained from the local cache.|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/archivesclient-0000001050123603#section20922651183118)|{            isRealTime: "1",      //Whether to connect to the Internet to fetch data." 1" Yes, means to get data from Huawei game server. No, the data is fetched from the local cache. The local cache time is 5 minutes, if the local cache is not available or the cache has expired, it will be obtained from the Huawei game server.}|
+|loadArchiveDetails|Reads archive metadata based on the ArchiveMetadata object|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/archivesclient-0000001050123603#section410921163316)|{            <br>diffStrategy: "STRATEGY_TOTAL_PROGRESS",//https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References/archivesclient-0000001050123603#section073211610341            <br>archiveId: selectInfo.archiveId, }|
+|updateArchive|Uses the modified archive metadata and archive file content to resolve a data conflict asynchronously|[Link](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/archivesclient-0000001050123603#section185311123389)|{            <br>archiveId: selectInfo.archiveId,            <br>activeTime: "8000",            <br>currentProgress: "60",            <br>archiveDetails: "time=8000,progress=60",            <br>descInfo: "savedata" + Math.ceil(Math.random() * 100), }|
 
 Example
 

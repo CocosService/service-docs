@@ -225,8 +225,7 @@ Parameter Description
 
 |Parameter|Description|
 |-|-|
-|type|2 (StartIapActivityReq.TYPE_SUBSCRIBE_MANAGER_ACTIVITY) Jump to manage subscription page
-3 (StartIapActivityReq.TYPE_SUBSCRIBE_EDIT_ACTIVITY) Jump to manage subscription page|
+|type|2 (StartIapActivityReq.TYPE_SUBSCRIBE_MANAGER_ACTIVITY) Jump to manage subscription page,3 (StartIapActivityReq.TYPE_SUBSCRIBE_EDIT_ACTIVITY) Jump to manage subscription page|
 |productId|Used when subscribing to a product ID type of 3|
 
 Example

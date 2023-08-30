@@ -150,10 +150,10 @@ huawei.hms.location.locationService.requestLocationPermission();
 
 **Example:**
 
-```Plain Text
-        huawei.hms.location.locationService.once(huawei.hms.location.API_EVENT_LIST.HMS_LOCATION_GET_LOCATION_AVAILABILITY, (result) => {
-            this.consolePanel.log(result);
-        });
+```JavaScript
+huawei.hms.location.locationService.once(huawei.hms.location.API_EVENT_LIST.HMS_LOCATION_GET_LOCATION_AVAILABILITY, (result) => {
+    this.consolePanel.log(result);
+});
 huawei.hms.location.locationService.getLocationAvailability();
 ```
 
@@ -254,7 +254,7 @@ This function is used for a test environment. Open Android Settings menu, go to 
 
 Apply for the mock location permission in the AndroidManifest.xml file.
 
-```Plain Text
+```JavaScript
 <uses-permission
 android:name="android.permission.ACCESS_MOCK_LOCATION"
 tools:ignore="MockLocation,ProtectedPermissions" />
@@ -369,7 +369,6 @@ huawei.hms.location.locationActivityService.on(huawei.hms.location.HMS_LOCATION_
 }, this);
 
 huawei.hms.location.locationActivityService.on(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_CONVERSION_UPDATES, (result) => {
-    //todo
     console.log('HMS_CONVERSION_UPDATES...', JSON.stringify(result));
 }, this);
 ```

@@ -152,10 +152,10 @@ huawei.hms.location.locationService.requestLocationPermission();
 
 **示例**
 
-```Plain Text
-        huawei.hms.location.locationService.once(huawei.hms.location.API_EVENT_LIST.HMS_LOCATION_GET_LOCATION_AVAILABILITY, (result) => {
-            this.consolePanel.log(result);
-        });
+```JavaScript
+huawei.hms.location.locationService.once(huawei.hms.location.API_EVENT_LIST.HMS_LOCATION_GET_LOCATION_AVAILABILITY, (result) => {
+    this.consolePanel.log(result);
+});
 huawei.hms.location.locationService.getLocationAvailability();
 ```
 
@@ -278,7 +278,7 @@ huawei.hms.location.locationService.flushLocations();
 
 **示例**：
 
-```Plain Text
+```JavaScript
 huawei.hms.location.locationService.setLocationInterval(10000);
 ```
 
@@ -288,7 +288,7 @@ huawei.hms.location.locationService.setLocationInterval(10000);
 
 **示例**：
 
-```Plain Text
+```JavaScript
 huawei.hms.location.locationService.setLocationPriority(100);
 ```
 
@@ -306,7 +306,7 @@ huawei.hms.location.locationService.setLocationPriority(100);
 
 在 AndroidManifest.xml 文件中配置模拟定位权限（插件已经自动添加，如需删除可在构建成功后手动删除）。
 
-```Plain Text
+```JavaScript
 <uses-permission
 android:name="android.permission.ACCESS_MOCK_LOCATION"
 tools:ignore="MockLocation,ProtectedPermissions" />
@@ -423,7 +423,6 @@ huawei.hms.location.locationActivityService.on(huawei.hms.location.API_EVENT_LIS
 }, this);
 
 huawei.hms.location.locationActivityService.on(huawei.hms.location.API_EVENT_LIST.HMS_CONVERSION_UPDATES, (result) => {
-    //todo
     console.log('HMS_CONVERSION_UPDATES...', JSON.stringify(result));
 }, this);
 ```

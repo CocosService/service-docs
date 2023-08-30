@@ -84,38 +84,38 @@
 
 - Sample 工程 对应的云函数代码,可配置到[华为agc后台](https://developer.huawei.com/consumer/cn/service/josp/agc/index.html#/myProject/388421841221566752/9249519184595931747?appId=108702107)
 
-    ```Plain Text
-    let myHandler = function (event, context, callback, logger) {
-        var res = new context.HTTPResponse(context.env, {
-            "res-type": "context.env",
-            "faas-content-type": "json",
-        }, "application/json", "200");
+```JavaScript
+let myHandler = function (event, context, callback, logger) {
+    var res = new context.HTTPResponse(context.env, {
+        "res-type": "context.env",
+        "faas-content-type": "json",
+    }, "application/json", "200");
+
     
-     
-        if (event.body != null && event.body !="" && event.body !="{}" ) {
-            let _body = {
-                code:"200",
-                msg: "云函数调用成功",
-                hasParam: "携带参数",
-                paramType: "参数类型: "+typeof (event.body),
-                param: JSON.parse(event.body),
-            }
-            res.body = _body;
-            context.callback(res);
-        } else {
-          let _body = {
-                code:"200",
-                msg: "云函数调用成功",
-                hasParam: "未携带参数",
-                paramType: "无",
-                param: null,
-            }
-            res.body = _body;
-            context.callback(res);
+    if (event.body != null && event.body !="" && event.body !="{}" ) {
+        let _body = {
+            code:"200",
+            msg: "云函数调用成功",
+            hasParam: "携带参数",
+            paramType: "参数类型: "+typeof (event.body),
+            param: JSON.parse(event.body),
         }
+        res.body = _body;
+        context.callback(res);
+    } else {
+        let _body = {
+            code:"200",
+            msg: "云函数调用成功",
+            hasParam: "未携带参数",
+            paramType: "无",
+            param: null,
+        }
+        res.body = _body;
+        context.callback(res);
     }
-    module.exports.func = myHandler;
-    ```
+}
+module.exports.func = myHandler;
+```
 
 
 
