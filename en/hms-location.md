@@ -8,43 +8,37 @@
 
 - Geofence: Allows you to set an interested area through an API so that your app can receive a notification when a specified action (such as leaving, entering, or staying in the area) occurs.
 
-### Version Update Description
+### Fuction
 
-- Latest Version: 0.5.8_5.0.2
+#### Fused Location
 
-    - Update the SDK and add some functions.
-
-- v0.5.6_4.0.4
-
-    - Integrated Huawei HMS Location Kit.
-
-### Use Cases
-
-#### Fused location
-
-If your app needs to obtain the device location, you can apply for the location permission for your app, call the [requestLocationUpdates()](#requests-location-updates) API of HMS Core Location Kit, and specify a location mode as needed. To cancel obtaining location information, call the [removeLocationUpdates()](#requests-location-updates) API.
+If the application needs to request equipment location information, developers can apply for location permissions for the application, then calls the HMS Core request position update interface`requestLocationUpdates()`, according to the need to specify the location, access to the location of the continuous information callback. If you want to cancel the location callback once you have the location information, you can cancel the location update by calling the remove`removeLocationUpdates()`interface.
 
 #### Activity Identification
 
-If your app needs to obtain the activity status of a user (for example, walking, running, or bicycling) or detect activity status change of a user, you can apply for the activity identification permission for your app and call the [createActivityIdentificationUpdates()](#registers-activity-identification-updates) API. To cancel activity identification update, call the [deleteActivityIdentificationUpdates()](#removes-activity-identification-updates-associated) API. If you want to detect user activity status change, call the [createActivityConversionUpdates()](#detects-activity-conversions) API to listen for activity status changes of the current device. To cancel listening for activity status changes, call the [deleteActivityConversionUpdates()](#removes-activity-conversion-updates) API.
+If the application needs to get the device motion state, for example: Applications such as walking, running, cycling, or need to change to detect the state of motion of the user, so developers can apply for active status identification for the application permissions, update the interface by calling the activity state recognition`createActivityIdentificationUpdates()`, for the current user's active, And remove the activity recognition update just call `deleteActivityIdentificationUpdates()`interface. If need to change to detect the state of motion of the user, you can invoke activity state transition interface `createActivityConversionUpdates()`, through the interface can monitor the activities of the current equipment state transition, and remove the monitor, Just call `deleteActivityConversionUpdates()` interface.
 
 #### Geofence
 
-You can call the [createGeofenceList()](#adds-geofences) API to create a geofence based on the location that may be of interest to users. Then, Location Kit can sense the distance between the current device location and the geofence. When the device enters the geofence, a notification will be sent to your app. In addition, Location Kit can detect the duration during which the device stays in the geofence, and send a notification to your app if the stay duration reaches your preset limit.
+If you are interested in a particular location, you can create a geofence called `createGeofenceList()` based on the location of the location you want to follow. At the same time, the developer can detect the user's time in the fence and send a notification when the user has been in the fence for a certain amount of time.
 
-You can also create a geofence by dragging to select an area on the map and setting relevant parameters. For details, please refer to [Server Development](https://developer.huawei.com/consumer/en/doc/HMSCore-Guides-V5/server-dev-0000001050170474-V5).
+### Version Update Description
+
+- Latest Version:[3.x]0.0.5_6.11.0.301
+
+    - Update the SDK and add some functions.
 
 ## Enable Location Kit Service
 
 - Use Cocos Creator to open the project that needs to be connected to Location Kit.
 
-- Click on **Panel -> Service** in the menu bar to open the Service panel, select Location Kit service to go to the service detail page, and then click on the **Enable** button in the top right to enable the service. For details, please refer to the Cocos Service [Operation Guide](./index.md#usage) documentation.
+- Click on **Panel -> Service** in the menu bar to open the Service panel, select Location Kit service to go to the service detail page, and then click on the **Enable** button in the top right to enable the service. 
 
-  ![](hms-location/loc-provisioning.jpg)
+    ![image.png](hms-location/image.png)
 
-- Refer to [HUAWEI Location Kit Development Preparation](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/location-preparation) document to complete developer registration, app creation, **generation and configuring the Signing Certificate Fingerprint**.
+- Refer to the [Configuring App Information in AppGallery Connect](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-config-agc-0000001050163815) documentation to complete developer registration, app creation, enable Huawei Analysis Service parameter configuration, and enable the API.
 
-- Location Kit can be used directly, without additional operations in the AppGallery Connect console.
+- Fill in **App installation source** in "Params Config" of Analytics Kit service panel. For example, if the installation source of the application is Huawei AppGallery, you can fill in  **AppGallery**. The installation source name can contain up to 128 characters, including letters, digits, underscores (_), hyphens (-), and spaces. The name cannot start or end with a space if it contains only digits.
 
 ### Configs HUAWEI Config File
 
@@ -54,7 +48,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - On the **Project Setting** page, click the configuration file **agconnect-services.json** to download it. The `agconnect-services.json` file **must be copied manually** to the `settings` directory of the project directory after downloading or updating.
 
-  ![](./image/globle-configfile.jpg)
+    ![image.png](hms-location/image 1.png)
 
 **Note**:
 
@@ -62,36 +56,21 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 2. If the **Debug Mode** is checked in the **Build** panel, the developer needs to configure the Keystore signature file in the `app/build.gradle` file of Android Studio.
 
-    ![](./image/globle-keystore.jpg)
+    ![image.png](hms-location/image 2.png)
 
-3. For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
+1. For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
-    ![](./image/globle-agcfile.jpg)
+    ![3b3cf4b6eb63ffd7e1b2dd763ee480b.jpg](hms-location/3b3cf4b6eb63ffd7e1b2dd763ee480b.jpg)
 
 ### Verify whether the service is integrated successfully
 
-- Once the Location Kit is integrated, we can verify the success of the Location Kit integration by adding simple code to the script.
+- Can be issued, after the completion of code to add to the Android platform, please make sure that the build release package name in the panel with huawei background set package name consistent.
 
-  ```js
-  huawei.hms.location.locationService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_LOCATION_PERMISSION, (result) => {
-      if (result.code === huawei.hms.location.LocationActivityService.StatusCode.success)
-      {
-          console.log('requestLocationPermission...', 'success');
-      } else {
-          console.log('requestLocationPermission...', 'fail:', result.errMsg);
-      }
-  });
+- After the project runs to the mobile phone for the first time, if the dialog box for applying location permission pops up (see the picture below), it means that the access is successful.
 
-  huawei.hms.location.locationService.requestLocationPermission();
-  ```
+    ![image.png](hms-location/image 3.png)
 
-- You can [publish to the Android platform](https://docs.cocos.com/creator/manual/en/publish/publish-native.html) after the code is added. Please make sure that the **Package Name** on the **Build** panel is consistent with the **Package Name** set in the AppGallery Connect console.
-
-- The first time you run the project on a phone, the dialog box for applying for location permission will pop up (see the figure below), which means the integrate is successful.
-
-  ![](hms-location/loc-debugging.jpg)
-
-- If you have already applied for permission, you can view the log in Logcat.
+- You can view logs in Logcat if you have requested permission.
 
 ## Sample Project
 
@@ -105,7 +84,7 @@ Developer can get a quick taste of the Location Kit with the sample project.
 
 - Once the Sample project is running on the phone, click the **Location** button on the homepage for testing.
 
-  ![](hms-location/loc-sample.jpg)
+    ![image.png](hms-location/image 4.png)
 
 ## Developer Guide
 
@@ -125,7 +104,7 @@ Checks whether relevant location settings are valid.
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_LOCATION_SETTINGS, (result) => {
     if (result.code === huawei.hms.location.LocationActivityService.StatusCode.success) {
         console.log('checkLocationSettings...', 'success');
@@ -145,7 +124,7 @@ Dynamic application location permission method.
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_LOCATION_PERMISSION, (result) => {
     if (result.code === huawei.hms.location.LocationActivityService.StatusCode.success) 
     {
@@ -158,11 +137,27 @@ huawei.hms.location.locationService.once(huawei.hms.location.HMS_LOCATION_EVENT_
 huawei.hms.location.locationService.requestLocationPermission();
 ```
 
+#### Get location data availability
+
+`getLocationAvailability ():void`
+
+**parameter**
+
+|Parameter|Description|
+|-|-|
+|isLocationAvailable|Check whether the equipment location is known|
+|getLocationStatus|Gets the location status of the device|
+
+**Example:**
+
+```JavaScript
+huawei.hms.location.locationService.once(huawei.hms.location.API_EVENT_LIST.HMS_LOCATION_GET_LOCATION_AVAILABILITY, (result) => {
+    this.consolePanel.log(result);
+});
+huawei.hms.location.locationService.getLocationAvailability();
+```
+
 #### Requests location updates
-
-`requestLocationUpdates(): void`
-
-Requests location updates using the callback on the specified looper thread. This method can be called back continuously only when your process exists.
 
 `requestLocationUpdatesEx(): void`
 
@@ -170,7 +165,7 @@ Requests location updates. This is an extended location service API that support
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_REQUEST_LOCATION_UPDATE, (result) => {
     if (result.code === huawei.hms.location.LocationActivityService.StatusCode.success) {
         console.log('requestLocationUpdates...', 'success');
@@ -183,24 +178,6 @@ huawei.hms.location.locationService.requestLocationUpdates();
 huawei.hms.location.locationService.requestLocationUpdatesEx(); // For high-precision location
 ```
 
-`removeLocationUpdates(): void`
-
-Removes location updates.
-
-**Example**:
-
-```js
-huawei.hms.location.locationService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_REMOVE_LOCATION_UPDATE, (result) => {
-    if (result.code === huawei.hms.location.LocationActivityService.StatusCode.success) {
-        console.log('removeLocationUpdates...', 'success');
-    } else {
-        console.log('removeLocationUpdates...', 'fail:', result.errMsg);
-    }
-});
-
-huawei.hms.location.locationService.removeLocationUpdates();
-```
-
 #### Obtains the available location of the last request
 
 `getLastLocation(): void`
@@ -210,14 +187,16 @@ Instead of proactively requesting a location, this method uses the location cach
 The value **null** may be returned in the following scenarios:
 
 - The location function has never been used.
+
 - The location function is disabled.
+
 - The device is restored to factory settings.
 
 If real-time location is required, you are advised to proactively call `requestLocationUpdates` instead of `getLastLocation`.
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_LAST_LOCATION, (location) => {
     if (location.code === huawei.hms.location.LocationActivityService.StatusCode.success) {
         console.log('getLastLocation...', 'success', lon:' + location.longitude + ",lat:" + location.latitude);
@@ -235,7 +214,7 @@ Obtains the available location of the last request, including the detailed addre
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_GET_HWLOCATION, (result) => {
     if (result.code === huawei.hms.location.LocationService.StatusCode.success) {
         console.log('getLastLocationWithAddress success, data is ', JSON.stringify(result));
@@ -257,7 +236,7 @@ Updates the location under processing.
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_FLUSH_LOCATIONS, (result) => {
     if (result.code === huawei.hms.location.LocationService.StatusCode.success) {
         console.log('flushLocations success,data is ', result.toString());
@@ -275,7 +254,7 @@ This function is used for a test environment. Open Android Settings menu, go to 
 
 Apply for the mock location permission in the AndroidManifest.xml file.
 
-```
+```JavaScript
 <uses-permission
 android:name="android.permission.ACCESS_MOCK_LOCATION"
 tools:ignore="MockLocation,ProtectedPermissions" />
@@ -289,13 +268,13 @@ Sets whether to use the location mock mode. If the value **true** is passed, the
 
 **Parameter Description**:
 
-| Parameter | Description |  
-| :---------- | :------------- |  
-| mockMode | If this parameter is set to **true**, the mock mode will be enabled. Can be set to **false** when mock mode is no longer needed. | 
+|Parameter|Description|
+|-|-|
+|mockMode|If this parameter is set to **true**, the mock mode will be enabled. Can be set to **false** when mock mode is no longer needed.|
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_MOCK_MODE, (result) => {
     if (location.code === huawei.hms.location.LocationActivityService.StatusCode.success) {
         console.log('setMockMode...', 'success');
@@ -315,14 +294,14 @@ You must call the `setMockMode (boolean)` method and set it to true before calli
 
 **Parameter Description**:
 
-| Parameter | Description |  
-| :---------- | :------------- |  
-| latitude | value of latitude | 
-| longitude | value of longitude |
+|Parameter|Description|
+|-|-|
+|latitude|value of latitude|
+|longitude|value of longitude|
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_MOCK_LOCATION, (result) => {
     if (location.code === huawei.hms.location.LocationActivityService.StatusCode.success)
     {
@@ -350,7 +329,7 @@ Refer to [Developing the Activity Identification Service](https://developer.huaw
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationActivityService.requestRecognitionPermission();
 ```
 
@@ -362,13 +341,13 @@ huawei.hms.location.locationActivityService.requestRecognitionPermission();
 
 **Parameter Description**:
 
-| Parameter | Description |  
-| :---------- | :------------- |  
-| intervalMillis | Interval for detecting activity updates, in milliseconds. Larger values will result in fewer activity detections. Smaller values will result in more activity detections. | 
+|Parameter|Description|
+|-|-|
+|intervalMillis|Interval for detecting activity updates, in milliseconds. Larger values will result in fewer activity detections. Smaller values will result in more activity detections.|
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationActivityService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_CREATE_ACTIVITY_IDENTIFICATION_UPDATES, (result) => {
     if (result.code === huawei.hms.location.LocationActivityService.StatusCode.success) {
         console.log('requestActivityUpdates...', 'success');
@@ -384,13 +363,12 @@ huawei.hms.location.locationActivityService.createActivityIdentificationUpdates(
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationActivityService.on(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_ACTIVITY_UPDATES, (result) => {
     console.log('HMS_ACTIVITY_UPDATES...', JSON.stringify(result));
 }, this);
 
 huawei.hms.location.locationActivityService.on(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_CONVERSION_UPDATES, (result) => {
-    //todo
     console.log('HMS_CONVERSION_UPDATES...', JSON.stringify(result));
 }, this);
 ```
@@ -401,7 +379,7 @@ huawei.hms.location.locationActivityService.on(huawei.hms.location.HMS_LOCATION_
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationActivityService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_REMOVE_ACTIVITY_CONVERSION_UPDATES, (result) => {
     if (result.code === huawei.hms.location.LocationActivityService.StatusCode.success) {
         console.log('deleteActivityUpdates...', 'success');
@@ -421,7 +399,7 @@ Detects activity conversions (entering and exit), for example, detecting user st
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationActivityService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_CREATE_ACTIVITY_CONVERSION_UPDATES, (result) => {
     if (result.code === huawei.hms.location.LocationActivityService.StatusCode.success) {
         console.log('createActivityConversionUpdates...', 'success');
@@ -446,7 +424,7 @@ huawei.hms.location.locationActivityService.createActivityConversionUpdates(info
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationActivityService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_REMOVE_ACTIVITY_CONVERSION_UPDATES, (result) => {
     if (result.code === huawei.hms.location.LocationActivityService.StatusCode.success) {
         console.log('deleteActivityConversionUpdates...', 'success');
@@ -468,7 +446,7 @@ Refer to [Developing the Geofence Service](https://developer.huawei.com/consumer
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationGeofenceService.on(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_RECEIVE_GEOFENCE_DATA, (result) => {
     console.log('HMS_RECEIVE_GEOFENCE_DATA...', JSON.stringify(result));
 }, this);
@@ -480,7 +458,7 @@ huawei.hms.location.locationGeofenceService.on(huawei.hms.location.HMS_LOCATION_
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationGeofenceService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_CREATE_GEOFENCE_LIST, (result) => {
     if (result.code === huawei.hms.location.LocationActivityService.StatusCode.success) {
         console.log('createGeofenceList...', 'success');
@@ -513,7 +491,7 @@ huawei.hms.location.locationGeofenceService.createGeofenceList(list, initType);
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationGeofenceService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_REMOVE_GEOFENCE_WITH_INTENT, (result) => {
     if (result.code === huawei.hms.location.LocationActivityService.StatusCode.success) {
         console.log('removeWithIntent...', 'success');
@@ -531,7 +509,7 @@ huawei.hms.location.locationGeofenceService.removeWithIntent();
 
 **Example**:
 
-```js
+```JavaScript
 huawei.hms.location.locationGeofenceService.once(huawei.hms.location.HMS_LOCATION_EVENT_LISTENER_NAME.HMS_REMOVE_GEOFENCE_WITH_ID, (result) => {
     if (result.code === huawei.hms.location.LocationActivityService.StatusCode.success) {
         console.log('removeWithID...', 'success');
@@ -547,3 +525,8 @@ huawei.hms.location.locationGeofenceService.removeWithID(removeID);
 ## API Reference
 
 Please refer to the [Location Kit - API Reference](https://service.cocos.com/document/api/modules/huawei.hms.location.html).
+
+- Refer to the [Configuring App Information in AppGallery Connect](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-config-agc-0000001050163815) documentation to complete developer registration, app creation, enable Huawei Analysis Service parameter configuration, and enable the API.
+
+- Fill in **App installation source** in "Params Config" of Analytics Kit service panel. For example, if the installation source of the application is Huawei AppGallery, you can fill in  **AppGallery**. The installation source name can contain up to 128 characters, including letters, digits, underscores (_), hyphens (-), and spaces. The name cannot start or end with a space if it contains only digits.
+
