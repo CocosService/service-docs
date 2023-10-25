@@ -13,6 +13,7 @@
     - [Game Service（HMS Core）](hms-game.md)
     - [Cloud Functions（AGC）](agc-function.md)
     - [App Performance Management（AGC）](agc-apms.md)
+    - [Remote Configuration（AGC）](agc-remoteconfig.md)
     - [Cocos SDKHub](sdkhub.md)
         - [Google Play](sdkhub-plugins/google-play.md)
     - [Vungle](vunglead.md)
