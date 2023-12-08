@@ -34,6 +34,10 @@ The **Service** Panel currently supports the integration of third-party services
     
   - [Cloud Functions (AppGallery Connect)](agc-cloudfunc.md)
 
+  - [Online Multiplayer Battles (AppGallery Connect)）](hw-gobe.md)
+  
+  - [Game Multimedia (AppGallery Connect)](hw-mmsdk.md)
+
   - [Agora RTC](agora.md)
 
 ## Usage
