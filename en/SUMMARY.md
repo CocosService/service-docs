@@ -14,6 +14,8 @@
     - [Cloud Functions（AGC）](agc-function.md)
     - [App Performance Management（AGC）](agc-apms.md)
     - [Remote Configuration（AGC）](agc-remoteconfig.md)
+    - [Online Multiplayer Battles (AppGallery Connect)）](hw-gobe.md)
+    - [Game Multimedia (AppGallery Connect)](hw-mmsdk.md)
     - [Cocos SDKHub](sdkhub.md)
         - [Google Play](sdkhub-plugins/google-play.md)
     - [Vungle](vunglead.md)
