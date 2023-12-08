@@ -12,9 +12,9 @@ The [Game Multimedia Service](https://developer.huawei.com/consumer/cn/doc/devel
 | Sound Effects Playback | In game or live broadcast scenarios, it's often necessary to play short sound effects like bullet sounds or applause to enhance the sense of reality or set the scene atmosphere. The game multimedia SDK provides related interfaces for sound effect playback, useful for managing the playback of short sound effects and volume coefficients. |
 | Voice to Text | The voice-to-text function can quickly recognize real-time voice and transcribe it into text content, useful for scenarios like voice input. |
 
-### 工作原理
+### Operational Mechanism
 
-集成游戏多媒体服务SDK的客户端，将语音信息输入到华为游戏多媒体服务器，服务器接收并处理，然后将语音数据输出给房间内的所有客户端。同时，游戏多媒体服务SDK还提供IM聊天功能，用于不同客户端之间的消息会话。您只需要将游戏多媒体服务SDK集成到您的游戏中，并通过简单的功能开发，即可为您的游戏快速构建语音对讲和即时消息能力。
+Clients integrated with the Game Multimedia Service SDK input voice information into the Huawei Game Multimedia Server. The server receives and processes this information, subsequently outputting the voice data to all clients within the room. Simultaneously, the Game Multimedia Service SDK provides an Instant Messaging (IM) feature for message conversations between different clients. By integrating the Game Multimedia Service SDK into your game and conducting simple feature development, you can swiftly build voice chat and instant messaging capabilities for your game.
 
 ![https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20230811185002.93436547234333337127849612796014:50001231000000:2800:F2DBDC5E8A8BF9714CD86AE106AC9F9644527E6F58345A474E8A3BE4EB36E1A2.png?needInitFileName=true?needInitFileName=true](https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20230811185002.93436547234333337127849612796014:50001231000000:2800:F2DBDC5E8A8BF9714CD86AE106AC9F9644527E6F58345A474E8A3BE4EB36E1A2.png?needInitFileName=true?needInitFileName=true)
 
@@ -140,7 +140,7 @@ let info = {
 this.mmsdkService.init(info);
 ```
 
-#### 销毁实例
+#### Destroy instance
 
 `destroy(): void;`
 
