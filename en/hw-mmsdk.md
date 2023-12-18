@@ -21,8 +21,9 @@ Clients integrated with the Game Multimedia Service SDK input voice information 
 
 ## Version Update Instructions
 
-- Current version: [3.x] 1
-    - Initial version
+- Current version: [3.x] 1.0.6_1.12.1.300
+    - Fixed an error reporting the listening channel property change callback
+    - Fixed errors when updating other player positions
 
 ## Quick Integration of Game Multimedia
 
