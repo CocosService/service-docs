@@ -24,6 +24,10 @@ If you are interested in a particular location, you can create a geofence called
 
 ### Version Update Description
 
+- Latest Version：[3.x]1.0.0_6.12.0.300
+
+    - Update to 6.12.0.300
+
 - Latest Version:[3.x]0.0.5_6.11.0.301
 
     - Update the SDK and add some functions.
