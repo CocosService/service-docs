@@ -24,7 +24,7 @@ If you are interested in a particular location, you can create a geofence called
 
 ### Version Update Description
 
-- Latest Version：[3.x]1.0.0_6.12.0.300
+- Latest Version：[3.x]1.0.1_6.12.0.300
 
     - Update to 6.12.0.300
 
