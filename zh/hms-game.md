@@ -12,6 +12,13 @@
 
 ## 版本更新说明
 
+
+- 当前版本：[3.x] 1.0.1_6.12.0.300
+
+    - 完善内部实现
+    - 新增PlayersClient.savePlayerRole接口,废弃submitAppPlayerInfo接口
+    - SDK 升级到 6.12.0.300
+
 - 当前版本：[3.x] 0.0.4_6.10.0.300
 
     - Android版本：com.huawei.hms:game:6.10.0.300
@@ -241,7 +248,7 @@ this.game.once(huawei.hms.game.API_EVENT_LIST.getAppIdCallback, (result: huawei.
 this.game.getAppId();
 ```
 
-#### 保存玩家在游戏内的信息，如等级、区服等。
+#### [废弃]保存玩家在游戏内的信息，如等级、区服等。
 
 `submitAppPlayerInfo (info: { area: string; rank: string; role: string; sociaty: string; }): void;`
 
@@ -255,6 +262,23 @@ this.game.once(huawei.hms.game.API_EVENT_LIST.submitAppPlayerInfoCallback, (resu
 });
 this.game.submitAppPlayerInfo({
     area: "测试区服1", rank: "测试等级1", role: "测试角色1", sociaty: "测试工会消息1"
+});
+```
+
+#### 保存玩家在游戏内的角色信息，如区服、角色名称等。
+
+`savePlayerRole (info: { serverId: string; serverName: string; roleId: string; roleName: string; }): void;`
+
+[API文档](https://developer.huawei.com/consumer/cn/doc/HMSCore-References/playersclient-0000001050121668#section14448819342)
+
+示例
+
+```TypeScript
+this.game.once(huawei.hms.game.API_EVENT_LIST.savePlayerRoleCallback, (result: huawei.hms.game.ApiCbResult) => {
+    this.consolePanel.log(result);
+});
+this.game.savePlayerRole({
+    serverId: "123", serverName: "测试等级1", roleId: "321", roleName: "测试角色1"
 });
 ```
 
