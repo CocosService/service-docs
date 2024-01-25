@@ -47,19 +47,17 @@ Cocos Service 是集成在 Cocos Creator 内的服务面板，其中提供了一
 
 Cocos Service 目前支持集成以下服务：
 
-- [Vungle](vunglead.md)：通过全球最大的独立和隐私友好平台“一键变现”。
-- [声网（Agora RTC）](agora.md)：实时音视频。
-- [FrontJS](frontjs.md)：帮助游戏开发者快速定位和分析问题所在，改善用户体验，提升业务转化，减少用户流失。
-- [易盾（网易）](neteaseyidun.md)：提供游戏包体加固、反外挂一站式服务。
 - [定位服务（HMS Core）](hms-location.md)：采用 GPS、Wi-Fi、基站等多种混合定位模式进行定位，赋予您的应用程序快速、精准地获取用户位置信息的能力。
 - [分析服务（HMS Core）](hms-analytics.md)：基于开发者上报的用户行为和属性数据，提供多种分析能力。
-- [性能管理（AppGallery Connect）](agc-apm.md)：提供分钟级应用性能监控能力，收集应用性能数据。
-- [认证服务（AppGallery Connect）](agc-auth.md)：使应用快速构建安全可靠额用户认证系统。
-- [崩溃服务（AppGallery Connect）](agc-crash.md)：零代码快速集成，通过崩溃报告了解应用崩溃情况。
-- [远程配置（AppGallery Connect）](agc-remote.md)：应用可在线更改行为和外观，无需下载应用更新。
-- [应用内消息（AppGallery Connect）](agc-appmessaging.md)：基于用户使用情境发送上下文相关消息，增强用户粘性。
-- [App Linking（AppGallery Connect）](agc-applinking.md)：跨平台深度链接直达应用内内容，推动应用增长。
-- [云数据库（AppGallery Connect）](agc-clouddb.md)：安全可信的数据管理服务。
-- [云存储（AppGallery Connect）](agc-cloudstorage.md)：跨平台提供高效经济的文件上传下载服务。
-- [云函数（AppGallery Connect）](agc-cloudfunc.md)：事件驱动的函数计算平台，保证高可用与伸缩，让开发者便捷运行代码而无需管理服务器。
-- [Cocos SDKHub](sdkhub.md)：快速接入原生平台 SDK。
+- [华为帐号服务（HMS Core）](hms-account.md)为您提供了简单、安全的登录授权功能，方便用户快捷登录。
+- [推送服务（HMS Core）](hms-push.md)是华为提供的消息推送平台，建立了从云端到终端的消息推送通道。
+- [应用内支付服务（HMS Core）](hms-iap.md)为App提供便捷的应用内支付体验和简便的接入流程。
+- [游戏服务（HMS Core）](hms-game.md)是华为向您提供的能够快速开发游戏应用的服务。
+- [广告服务（HMS Core）](hms-ads.md)依托华为终端平台与数据能力为您提供流量变现服务，帮助您解决流量变现的难题；同时为广告主提供广告服务，配合华为终端平台向用户提供个性化的营销活动或商业广告。
+- [性能管理（AppGallery Connect）](agc-apms.md)：提供分钟级应用性能监控能力，收集应用性能数据。
+- [云函数（AppGallery Connect）](agc-function.md)是一项Serverless计算服务，提供FaaS（Function as a Service）能力
+- [远程配置（AppGallery Connect）](agc-remoteconfig.md)提供在线的配置项管理能力，开发者可以在线更改应用的行为和外观，无需用户下载应用更新。
+- [联机对战（AppGallery Connect）](hw-gobe.md)为多人联机游戏提供了房间管理、玩家匹配、队伍管理、消息通信等功能，具备优质的联网和服务端能力。
+- [游戏多媒体（AppGallery Connect）](hw-mmsdk.md)是华为游戏中心推出的一款快速实现游戏内实时语音对讲和IM聊天（Instant Messaging，即时通讯）功能的服务。
+- [Vungle](vunglead.md)：通过全球最大的独立和隐私友好平台“一键变现”。
+- [Taobao Avatar SDK](taobaoavatar.md)开发者可以通过集成SDK，快速拥有虚拟角色的相关能力，使用已有的淘宝人生虚拟角色，用于游戏或软件的开发。

@@ -12,7 +12,10 @@
 
 ### Version Update Description (Cocos Creator 2.x)
 
-- Latest Version: v0.5.4_1.5.2.300
+- Latest Version：[3.x] 2.1.5_1.6.2.300
+    - Improve internal implementation 
+
+- v0.5.4_1.5.2.300
 
     - Add support for Game SDK.
 

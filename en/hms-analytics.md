@@ -16,7 +16,12 @@
 
 ### Version Update Description
 
-- Latest Version:[3.x] 2.2.1_6.10.0.303
+- Latest Version：[3.x] 2.3.1_6.12.0.300
+    - Improve internal implementation
+
+    - SDK upgrade to 6.12.0.300
+
+- [3.x] 2.2.1_6.10.0.303
 
     - Upgrade the SDK version.
 
