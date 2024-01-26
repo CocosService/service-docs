@@ -16,7 +16,7 @@
 
 ### Version Update Description
 
-- Latest Version：[3.x] 1.1.1_6.12.0.300
+- Latest Version：[3.x] 1.1.2_6.12.0.300
     - Improve internal implementation
     - Account information does not provide accessToken and account content
 

@@ -13,7 +13,7 @@
 ## 版本更新说明
 
 
-- 当前版本：[3.x] 1.0.1_6.12.0.300
+- 当前版本：[3.x] 1.0.2_6.12.0.300
 
     - 完善内部实现
     - 新增PlayersClient.savePlayerRole接口,废弃submitAppPlayerInfo接口

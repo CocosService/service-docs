@@ -34,7 +34,7 @@ Releasing new functions to all users at the same time may be risky. Remote Confi
 
 ### Version Update Description
 
-- Latest Version：[3.x] 2.3.1_1.9.1.302
+- Latest Version：[3.x] 2.3.3_1.9.1.302
     - Improve internal implementation
 
     - SDK upgrade to 1.9.1.302  

@@ -12,7 +12,7 @@ Game Service provides the following functions for your game apps, with which you
 
 ### Version Update Description
 
-- Latest Version：[3.x] 1.0.1_6.12.0.300
+- Latest Version：[3.x] 1.0.2_6.12.0.300
     - Improve internal implementation
     - new PlayersClient. SavePlayerRole interface, abandoned submitAppPlayerInfo interface
     - Upgrade the SDK to 6.12.0.300

@@ -14,7 +14,7 @@ With IAP, you can offer the following types of digital products and content with
 
 ### Version Update Description
 
-- Latest Version：[3.x] 1.0.1_6.13.0.300
+- Latest Version：[3.x] 1.0.3_6.13.0.300
     - Improve internal implementation
 
     - SDK upgrade to 6.13.0.300

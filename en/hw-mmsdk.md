@@ -21,7 +21,7 @@ Clients integrated with the Game Multimedia Service SDK input voice information 
 
 ## Version Update Instructions
 
-- Current version:[3.x]1.0.9_1.12.2.300
+- Current version:[3.x]1.0.11_1.12.2.300
 
     - Improve internal implementation
     - Upgrade the SDK to 1.12.2.300
