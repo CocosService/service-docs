@@ -34,7 +34,13 @@
 
 ### 版本更新说明
 
-- 当前版本：[3.x] 2.2.0_1.9.1300
+- 当前版本：[3.x] 2.3.3_1.9.1.302
+
+    - 完善内部实现
+
+    - SDK 升级到 1.9.1.302 
+
+- [3.x] 2.2.0_1.9.1300
 
     - 更新sdk
 
@@ -133,7 +139,7 @@
 
 |参数|说明|
 |-|-|
-|intervalSeconds|获取数据的间隔时间，单位为秒，默认值为 -1，更新周期为 12 小时|
+|intervalSeconds|设置间隔时间不能小于1800秒，小于1800秒将按1800秒处理|
 
 **示例**：
 
@@ -155,7 +161,7 @@ huawei.agc.rc.rcService.fetchAndApply(interval);
 
 |参数|说明|
 |-|-|
-|intervalSeconds|获取数据的间隔时间，单位为秒，默认值为 -1 ，更新周期为 12 小时|
+|intervalSeconds|设置间隔时间不能小于1800秒，小于1800秒将按1800秒处理|
 
 **示例**：
 
@@ -320,6 +326,18 @@ huawei.agc.rc.rcService.setCustomAttributes(map);
 ```JavaScript
 let value: string = huawei.agc.rc.rcService.getCustomAttributes();
 console.log("getCustomAttributes succeed: ", value);
+```
+
+### 设置是否允许收集用户隐私信息
+
+`setEnableCollectUserPrivacy(enable: boolean): void`
+
+设置是否允许收集用户隐私信息，包含芯片类型和HA用户属性信息，默认true。
+
+**示例**：
+
+```JavaScript
+huawei.agc.rc.rcService.setEnableCollectUserPrivacy(true);
 ```
 
 ## 其他

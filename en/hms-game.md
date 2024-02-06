@@ -12,7 +12,12 @@ Game Service provides the following functions for your game apps, with which you
 
 ### Version Update Description
 
-- Latest Version:[3.x] 0.0.4_6.10.0.300
+- Latest Version：[3.x] 1.0.2_6.12.0.300
+    - Improve internal implementation
+    - new PlayersClient. SavePlayerRole interface, abandoned submitAppPlayerInfo interface
+    - Upgrade the SDK to 6.12.0.300
+
+- [3.x] 0.0.4_6.10.0.300
 
     - Android Version：com.huawei.hms:game:6.10.0.300
 
@@ -243,7 +248,7 @@ this.game.once(huawei.hms.game.API_EVENT_LIST.getAppIdCallback, (result: huawei.
 this.game.getAppId();
 ```
 
-#### Stores the information about a player in a game, such as the level and region.
+#### [deprecated]Stores the information about a player in a game, such as the level and region.
 
 `submitAppPlayerInfo (info: { area: string; rank: string; role: string; sociaty: string; }): void;`
 
@@ -257,6 +262,23 @@ this.game.once(huawei.hms.game.API_EVENT_LIST.submitAppPlayerInfoCallback, (resu
 });
 this.game.submitAppPlayerInfo({
     area: "server region1", rank: "level1", role: "role1", sociaty: "Test guild information1"
+});
+```
+
+#### Save the player's character information in the game, such as area uniforms, character names, etc.
+
+`savePlayerRole (info: { serverId: string; serverName: string; roleId: string; roleName: string; }): void;`
+
+[References](https://developer.huawei.com/consumer/cn/doc/HMSCore-References/playersclient-0000001050121668#section14448819342)
+
+示例
+
+```TypeScript
+this.game.once(huawei.hms.game.API_EVENT_LIST.savePlayerRoleCallback, (result: huawei.hms.game.ApiCbResult) => {
+    this.consolePanel.log(result);
+});
+this.game.savePlayerRole({
+    serverId: "123", serverName: "server1", roleId: "321", roleName: "role1"
 });
 ```
 

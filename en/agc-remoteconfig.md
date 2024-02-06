@@ -34,7 +34,12 @@ Releasing new functions to all users at the same time may be risky. Remote Confi
 
 ### Version Update Description
 
-- Latest Version: [3.x] 2.2.0_1.9.1300
+- Latest Version：[3.x] 2.3.3_1.9.1.302
+    - Improve internal implementation
+
+    - SDK upgrade to 1.9.1.302  
+
+- Version: [3.x] 2.2.0_1.9.1300
 
     - Update the SDK.
 
@@ -129,7 +134,7 @@ It is recommended to use this method to fetch and apply parameter values from th
 
 |Parameter|Description|
 |-|-|
-|intervalSeconds|Interval for fetching data, the unit is seconds, default value is -1 for 12 hours.|
+|intervalSeconds|The setting interval cannot be less than 1800 seconds. If the interval is less than 1800 seconds, the system will process it in 1800 seconds.|
 
 **Example**:
 
@@ -151,7 +156,7 @@ Developers can also call the `fetch` method to get the `setRemoteConfigListener`
 
 |Parameter|Description|
 |-|-|
-|intervalSeconds|Interval for fetching data, the unit is seconds, default value is -1 for 12 hours.|
+|intervalSeconds|The setting interval cannot be less than 1800 seconds. If the interval is less than 1800 seconds, the system will process it in 1800 seconds|
 
 **Example**:
 
@@ -314,6 +319,18 @@ Obtains custom parameters.
 ```JavaScript
 let value: string = huawei.agc.rc.rcService.getCustomAttributes();
 console.log("getCustomAttributes succeed: ", value);
+```
+
+### Set whether to allow the collection of user privacy information
+
+`setEnableCollectUserPrivacy(enable: boolean): void`
+
+Set whether to allow the collection of user privacy information, including chip type and HA user attribute information. The default value is true.
+
+**Example**：
+
+```JavaScript
+huawei.agc.rc.rcService.setEnableCollectUserPrivacy(true);
 ```
 
 ## API Reference

@@ -6,39 +6,32 @@ Cocos Creator provides a **Service** panel in the **Menu bar -> Panel**, and dev
 
 The **Service** Panel currently supports the integration of third-party services including the following:
 
-  - [Vungle ](vunglead.md)
-
-  - [Yidun (NetEase)](neteaseyidun.md)
-
-  - [Cocos SDKHub](sdkhub.md)
 
   - [Location Kit (HMS Core)](hms-location.md)
 
   - [Analytics Kit (HMS Core)](hms-analytics.md)
 
-  - [APM (AppGallery Connect)](agc-apm.md)
+  - [HUAWEI Account Kit（HMS Core）](hms-account.md)
 
-  - [Auth Service (AppGallery Connect)](agc-auth.md)
+  - [Push Kit（HMS Core）](hms-push.md)
 
-  - [Crash (AppGallery Connect)](agc-crash.md)
+  - [In-App Purchases（HMS Core）](hms-iap.md)
+
+  - [Game Service（HMS Core）](hms-game.md)
+
+  - [APM (AppGallery Connect)](agc-apms.md)
+
+  - [Ads Kit（HMS Core）](hms-ads.md)
     
-  - [Remote Configuration (AppGallery Connect)](agc-remote.md)
+  - [Cloud Functions（AppGallery Connect）](agc-function.md)
 
-  - [App Messaging (AppGallery Connect)](agc-appmessaging.md)
-
-  - [App Linking (AppGallery Connect)](agc-applinking.md)
-
-  - [Cloud DB (AppGallery Connect)](agc-clouddb.md)
-    
-  - [Cloud Storage (AppGallery Connect)](agc-cloudstorage.md)
-    
-  - [Cloud Functions (AppGallery Connect)](agc-cloudfunc.md)
+  - [Remote Configuration（AppGallery Connect）](agc-remoteconfig.md)
 
   - [Online Multiplayer Battles (AppGallery Connect)）](hw-gobe.md)
-  
+
   - [Game Multimedia (AppGallery Connect)](hw-mmsdk.md)
 
-  - [Agora RTC](agora.md)
+  - [Taobao Avatar SDK](taobaoavatar.md)
 
 ## Usage
 

@@ -20,6 +20,10 @@ The client integrated with the online multiplayer battle service SDK sends vario
 
 
 ## Version Update
+- Current Version: [3.x] 1.0.0_13.8.1.300
+
+   - Improve internal implementation
+    - Upgrade the SDK to 13.8.1.300
 
 - Current Version: [3.x] 0.0.2_13.6.2.300
 

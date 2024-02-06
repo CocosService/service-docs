@@ -34,7 +34,12 @@ Cloud Functions lets you run function code to respond to specific events, such a
 
 ### Version Update Description
 
-- Latest Version:[3.X]2.1.3_1.9.1.300
+- Latest Version:[3.X]2.3.3_1.9.1.301
+
+     - Improve internal implementation
+     - SDK upgrade to 1.9.1.301
+
+- [3.X]2.1.3_1.9.1.300
 
     - Upgrade the sdk version.
 

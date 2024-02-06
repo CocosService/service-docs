@@ -2,8 +2,6 @@
 - [User Manual]()
     - [About Billing](about-billing.md)
 - [List of Services]()
-    - [Agora RTC](agora.md)
-    - [Yidun (NetEase)](neteaseyidun.md)
     - [Location Kit（HMS Core）](hms-location.md)
     - [Analytics Kit（HMS Core）](hms-analytics.md)
     - [Ads Kit（HMS Core）](hms-ads.md)
@@ -16,6 +14,5 @@
     - [Remote Configuration（AGC）](agc-remoteconfig.md)
     - [Online Multiplayer Battles (AppGallery Connect)）](hw-gobe.md)
     - [Game Multimedia (AppGallery Connect)](hw-mmsdk.md)
-    - [Cocos SDKHub](sdkhub.md)
-        - [Google Play](sdkhub-plugins/google-play.md)
-    - [Vungle](vunglead.md)
+    - [Taobao Avatar SDK](taobaoavatar.md)
+    
