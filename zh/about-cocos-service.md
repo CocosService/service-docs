@@ -59,5 +59,4 @@ Cocos Service 目前支持集成以下服务：
 - [远程配置（AppGallery Connect）](agc-remoteconfig.md)提供在线的配置项管理能力，开发者可以在线更改应用的行为和外观，无需用户下载应用更新。
 - [联机对战（AppGallery Connect）](hw-gobe.md)为多人联机游戏提供了房间管理、玩家匹配、队伍管理、消息通信等功能，具备优质的联网和服务端能力。
 - [游戏多媒体（AppGallery Connect）](hw-mmsdk.md)是华为游戏中心推出的一款快速实现游戏内实时语音对讲和IM聊天（Instant Messaging，即时通讯）功能的服务。
-- [Vungle](vunglead.md)：通过全球最大的独立和隐私友好平台“一键变现”。
 - [Taobao Avatar SDK](taobaoavatar.md)开发者可以通过集成SDK，快速拥有虚拟角色的相关能力，使用已有的淘宝人生虚拟角色，用于游戏或软件的开发。

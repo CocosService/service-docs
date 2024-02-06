@@ -30,7 +30,7 @@ You can access Push Kit in the following modes:
 ### Version Update Description
 
 
-- Latest Version：[3.x] 1.1.1_6.12.0.300
+- Latest Version：[3.x] 1.1.2_6.12.0.300
     - Improve internal implementation
 
     - SDK upgrade to 6.12.0.300

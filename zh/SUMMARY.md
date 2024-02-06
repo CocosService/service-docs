@@ -16,6 +16,5 @@
     - [远程配置（AGC）](agc-remoteconfig.md)
     - [联机对战（AGC）](hw-gobe.md)
     - [游戏多媒体（AGC）](hw-mmsdk.md)
-    - [Vungle](vunglead.md)
     - [Taobao Avatar SDK](taobaoavatar.md)
 
