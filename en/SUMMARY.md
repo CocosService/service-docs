@@ -14,6 +14,5 @@
     - [Remote Configuration（AGC）](agc-remoteconfig.md)
     - [Online Multiplayer Battles (AppGallery Connect)）](hw-gobe.md)
     - [Game Multimedia (AppGallery Connect)](hw-mmsdk.md)
-    - [Vungle](vunglead.md)
     - [Taobao Avatar SDK](taobaoavatar.md)
     
