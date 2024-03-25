@@ -21,7 +21,11 @@ Clients integrated with the Game Multimedia Service SDK input voice information 
 
 ## Version Update Instructions
 
-- Current version:[3.x]1.0.12_1.12.2.300
+- Current version:[3.x]1.1.0_1.13.1.300
+
+    - Upgrade the SDK to 1.13.1.300
+
+- [3.x]1.0.12_1.12.2.300
 
     - Improve internal implementation
     - Upgrade the SDK to 1.12.2.300
@@ -598,6 +602,76 @@ huawei.game.mmsdk.mmsdkService.once(huawei.game.mmsdk.API_EVENT_LIST.isEnableSpa
 })
 huawei.game.mmsdk.mmsdkService.isEnableSpatialSound("XXX");
 ```
+
+#### Turn on/off voice changes
+
+`enableVoiceConversion (roomId: string, voiceType: number): int;`
+
+[Guide](https://developer.huawei.com/consumer/cn/doc/AppGallery-connect-Guides/gamemme-voiceconversion-android-0000001772670850)
+
+Parameter Description
+
+|Parameter|Description|
+|-|-|
+|roomId|Room ID|
+|voiceType|Sound change type: Original sound type: Disable sound change|
+
+Code Example
+
+```TypeScript
+let result = huawei.game.mmsdk.mmsdkService.enableVoiceConversion(this._teamRoomId, huawei.game.mmsdk.VoiceType.LOLITA);
+```
+
+#### Query the type of sound change
+
+`getVoiceConversionType (roomId: string): int;`
+
+[Guide](https://developer.huawei.com/consumer/cn/doc/AppGallery-connect-Guides/gamemme-voiceconversion-android-0000001772670850)
+
+Parameter Description
+
+|Parameter|Description|
+|-|-|
+|roomId|Room ID|
+
+Code Example
+
+```TypeScript
+let result = huawei.game.mmsdk.mmsdkService.getVoiceConversionType(this._teamRoomId);
+```
+
+#### Test the sound effect
+
+`enableEarsBack (enable: boolean): int;`
+
+[Guide](https://developer.huawei.com/consumer/cn/doc/AppGallery-connect-Guides/gamemme-voiceconversion-android-0000001772670850)
+
+Parameter Description
+
+|Parameter|Description|
+|-|-|
+|enable|Turn on/off|
+
+Code Example
+
+```TypeScript
+let result = huawei.game.mmsdk.mmsdkService.enableEarsBack(true);
+```
+
+#### Check the status of the in-ear monitors
+
+`isEarsBackEnable (): boolean;`
+
+[Guide](https://developer.huawei.com/consumer/cn/doc/AppGallery-connect-Guides/gamemme-voiceconversion-android-0000001772670850)
+
+
+Code Example
+
+```TypeScript
+let result = huawei.game.mmsdk.mmsdkService.isEarsBackEnable();
+```
+
+
 #### Join Range Voice Room
 
 
