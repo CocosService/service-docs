@@ -23,7 +23,10 @@
 
 ## 版本更新说明
 
-- 当前版本：[3.x]1.0.12_1.12.2.300
+- 当前版本：[3.x]1.1.0_1.13.1.300
+    - SDK 升级到 1.13.1.300
+
+- [3.x]1.0.12_1.12.2.300
 
     - 完善内部实现
     - SDK 升级到 1.12.2.300
@@ -667,6 +670,74 @@ huawei.game.mmsdk.mmsdkService.once(huawei.game.mmsdk.API_EVENT_LIST.onJoinRange
     console.log(result);
 })
 huawei.game.mmsdk.mmsdkService.joinRangeRoom("XXX");
+```
+
+#### 开启/关闭房间内语音变声
+
+`enableVoiceConversion (roomId: string, voiceType: number): int;`
+
+[指南](https://developer.huawei.com/consumer/cn/doc/AppGallery-connect-Guides/gamemme-voiceconversion-android-0000001772670850)
+
+参数说明
+
+|参数|说明|
+|-|-|
+|roomId|房间ID|
+|voiceType|变声类型,原声类型表示关闭变声|
+
+代码示例
+
+```TypeScript
+let result = huawei.game.mmsdk.mmsdkService.enableVoiceConversion(this._teamRoomId, huawei.game.mmsdk.VoiceType.LOLITA);
+```
+
+#### 查询当前房间的变声类型
+
+`getVoiceConversionType (roomId: string): int;`
+
+[指南](https://developer.huawei.com/consumer/cn/doc/AppGallery-connect-Guides/gamemme-voiceconversion-android-0000001772670850)
+
+参数说明
+
+|参数|说明|
+|-|-|
+|roomId|房间ID|
+
+代码示例
+
+```TypeScript
+let result = huawei.game.mmsdk.mmsdkService.getVoiceConversionType(this._teamRoomId);
+```
+
+#### 测试变声效果
+
+`enableEarsBack (enable: boolean): int;`
+
+[指南](https://developer.huawei.com/consumer/cn/doc/AppGallery-connect-Guides/gamemme-voiceconversion-android-0000001772670850)
+
+参数说明
+
+|参数|说明|
+|-|-|
+|enable|开启关闭|
+
+代码示例
+
+```TypeScript
+let result = huawei.game.mmsdk.mmsdkService.enableEarsBack(true);
+```
+
+#### 查询耳返是否已开启
+
+`isEarsBackEnable (): boolean;`
+
+[指南](https://developer.huawei.com/consumer/cn/doc/AppGallery-connect-Guides/gamemme-voiceconversion-android-0000001772670850)
+
+
+代码示例
+
+```TypeScript
+let result = huawei.game.mmsdk.mmsdkService.isEarsBackEnable();
 ```
 
 ### 实时信令
