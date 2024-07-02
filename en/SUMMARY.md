@@ -1,6 +1,4 @@
 # Summary
-- [User Manual]()
-    - [About Billing](about-billing.md)
 - [List of Services]()
     - [Location Kit（HMS Core）](hms-location.md)
     - [Analytics Kit（HMS Core）](hms-analytics.md)

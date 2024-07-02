@@ -2,7 +2,6 @@
 
 - [使用说明]()
     - [服务面板操作指南](user-guide.md)
-    - [计费说明](about-billing.md)
 - [服务列表]()
     - [定位服务（HMS Core）](hms-location.md)
     - [分析服务（HMS Core）](hms-analytics.md)
