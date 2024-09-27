@@ -23,7 +23,12 @@
 
 ## 版本更新说明
 
-- 当前版本：[3.x]1.1.0_1.13.1.300
+- 当前版本：[3.x]1.2.0_14.0.1.300
+
+    - SDK 升级到 14.0.1.300
+    - GameMediaEngine类新增startDetectAudioFile方法，支持对语音消息文件进行风控送检。
+
+- [3.x]1.1.0_1.13.1.300
     - SDK 升级到 1.13.1.300
 
 - [3.x]1.0.12_1.12.2.300
@@ -1118,7 +1123,26 @@ huawei.game.mmsdk.mmsdkService.once(huawei.game.mmsdk.API_EVENT_LIST.onDownloadA
 huawei.game.mmsdk.mmsdkService.downloadAudioMsgFile("XXX", "XXX", 3000);
 ```
 
+#### 风控送检
 
+`startDetectAudioFile (fileId: string): void;`
+
+[指南](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/gamemme-record-play-audio-msg-android-0000001550814805#section124701481487)
+
+参数说明
+
+|参数|说明|
+|-|-|
+|fileId|待下载文件唯一标识，即文件ID。|
+
+代码示例
+
+```TypeScript
+huawei.game.mmsdk.mmsdkService.once(huawei.game.mmsdk.API_EVENT_LIST.onStartDetectAudioFileCallback, (result: huawei.game.mmsdk.ApiCbResult) => {
+    console.log(result);
+})
+huawei.game.mmsdk.mmsdkService.startDetectAudioFile("XXX");
+```
 
 #### 播放语音消息
 
