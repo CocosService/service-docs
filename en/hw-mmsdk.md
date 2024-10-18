@@ -21,7 +21,12 @@ Clients integrated with the Game Multimedia Service SDK input voice information 
 
 ## Version Update Instructions
 
-- Current version:[3.x]1.1.0_1.13.1.300
+- Current version:[3.x]1.2.0_14.0.1.300
+
+    - Upgrade the SDK to 14.0.1.300
+    - The GameMediaEngine class adds the startDetectAudioFile method, which supports risk control sending of voice message files.
+
+- [3.x]1.1.0_1.13.1.300
 
     - Upgrade the SDK to 1.13.1.300
 
@@ -1076,6 +1081,28 @@ huawei.game.mmsdk.mmsdkService.once(huawei.game.mmsdk.API_EVENT_LIST.onDownloadA
 })
 huawei.game.mmsdk.mmsdkService.downloadAudioMsgFile("XXX", "XXX", 3000);
 ```
+
+#### Detect Audio File
+
+`startDetectAudioFile (fileId: string): void;`
+
+[Guide](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/gamemme-record-play-audio-msg-android-0000001550814805#section124701481487)
+
+Parameter Description
+
+|Parameter|Description|
+|-|-|
+|fileId|Unique identifier for the file to be downloaded, i.e., file ID.|
+
+Code Example
+
+```TypeScript
+huawei.game.mmsdk.mmsdkService.once(huawei.game.mmsdk.API_EVENT_LIST.onStartDetectAudioFileCallback, (result: huawei.game.mmsdk.ApiCbResult) => {
+    console.log(result);
+})
+huawei.game.mmsdk.mmsdkService.startDetectAudioFile("XXX");
+```
+
 #### Play Voice Message
 
 
