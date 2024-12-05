@@ -18,7 +18,10 @@ Ads Kit provides the Open Advertising Identifier (OAID) and install referrer cap
 
 ### Version Update Description
 
-- Latest Version：[3.x] 1.1.0_13.4.74.300
+- Latest Version：[3.x] 1.2.0_13.4.75.300
+    - SDK upgrade to 13.4.75.300
+
+- Version：[3.x] 1.1.0_13.4.74.300
     - SDK upgrade to 13.4.74.300
 
 - Version：[3.x] 1.0.2_13.4.68.300
